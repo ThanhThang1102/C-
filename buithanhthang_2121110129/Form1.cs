@@ -66,5 +66,11 @@ namespace buithanhthang_2121110129
             Form11 f11 = new Form11();
             f11.Show();
         }
+
+        private void btn11_Click(object sender, EventArgs e)
+        {
+            Form12 f12 = new Form12();
+            f12.Show();
+        }
     }
 }
