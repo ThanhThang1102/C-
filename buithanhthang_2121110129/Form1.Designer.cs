@@ -42,20 +42,6 @@
             btn11 = new Button();
             btn9 = new Button();
             btn8 = new Button();
-            btn21 = new Button();
-            btn20 = new Button();
-            btn19 = new Button();
-            btn17 = new Button();
-            btn18 = new Button();
-            btn16 = new Button();
-            btn15 = new Button();
-            btn28 = new Button();
-            btn27 = new Button();
-            btn26 = new Button();
-            btn24 = new Button();
-            btn25 = new Button();
-            btn23 = new Button();
-            btn22 = new Button();
             label1 = new Label();
             SuspendLayout();
             // 
@@ -146,6 +132,7 @@
             btn13.TabIndex = 12;
             btn13.Text = "Bài 13";
             btn13.UseVisualStyleBackColor = true;
+            btn13.Click += btn13_Click;
             // 
             // btn12
             // 
@@ -155,6 +142,7 @@
             btn12.TabIndex = 11;
             btn12.Text = "Bài 12";
             btn12.UseVisualStyleBackColor = true;
+            btn12.Click += btn12_Click;
             // 
             // btn10
             // 
@@ -196,132 +184,6 @@
             btn8.UseVisualStyleBackColor = true;
             btn8.Click += btn8_Click;
             // 
-            // btn21
-            // 
-            btn21.Location = new Point(498, 154);
-            btn21.Name = "btn21";
-            btn21.Size = new Size(75, 23);
-            btn21.TabIndex = 20;
-            btn21.Text = "Bài 21";
-            btn21.UseVisualStyleBackColor = true;
-            // 
-            // btn20
-            // 
-            btn20.Location = new Point(417, 154);
-            btn20.Name = "btn20";
-            btn20.Size = new Size(75, 23);
-            btn20.TabIndex = 19;
-            btn20.Text = "Bài 20";
-            btn20.UseVisualStyleBackColor = true;
-            // 
-            // btn19
-            // 
-            btn19.Location = new Point(336, 154);
-            btn19.Name = "btn19";
-            btn19.Size = new Size(75, 23);
-            btn19.TabIndex = 18;
-            btn19.Text = "Bài 19";
-            btn19.UseVisualStyleBackColor = true;
-            // 
-            // btn17
-            // 
-            btn17.Location = new Point(174, 154);
-            btn17.Name = "btn17";
-            btn17.Size = new Size(75, 23);
-            btn17.TabIndex = 17;
-            btn17.Text = "Bài 17";
-            btn17.UseVisualStyleBackColor = true;
-            // 
-            // btn18
-            // 
-            btn18.Location = new Point(255, 154);
-            btn18.Name = "btn18";
-            btn18.Size = new Size(75, 23);
-            btn18.TabIndex = 16;
-            btn18.Text = "Bài 18";
-            btn18.UseVisualStyleBackColor = true;
-            // 
-            // btn16
-            // 
-            btn16.Location = new Point(93, 154);
-            btn16.Name = "btn16";
-            btn16.Size = new Size(75, 23);
-            btn16.TabIndex = 15;
-            btn16.Text = "Bài 16";
-            btn16.UseVisualStyleBackColor = true;
-            // 
-            // btn15
-            // 
-            btn15.Location = new Point(12, 154);
-            btn15.Name = "btn15";
-            btn15.Size = new Size(75, 23);
-            btn15.TabIndex = 14;
-            btn15.Text = "Bài 15";
-            btn15.UseVisualStyleBackColor = true;
-            // 
-            // btn28
-            // 
-            btn28.Location = new Point(498, 183);
-            btn28.Name = "btn28";
-            btn28.Size = new Size(75, 23);
-            btn28.TabIndex = 27;
-            btn28.Text = "Bài 28";
-            btn28.UseVisualStyleBackColor = true;
-            // 
-            // btn27
-            // 
-            btn27.Location = new Point(417, 183);
-            btn27.Name = "btn27";
-            btn27.Size = new Size(75, 23);
-            btn27.TabIndex = 26;
-            btn27.Text = "Bài 27";
-            btn27.UseVisualStyleBackColor = true;
-            // 
-            // btn26
-            // 
-            btn26.Location = new Point(336, 183);
-            btn26.Name = "btn26";
-            btn26.Size = new Size(75, 23);
-            btn26.TabIndex = 25;
-            btn26.Text = "Bài 26";
-            btn26.UseVisualStyleBackColor = true;
-            // 
-            // btn24
-            // 
-            btn24.Location = new Point(174, 183);
-            btn24.Name = "btn24";
-            btn24.Size = new Size(75, 23);
-            btn24.TabIndex = 24;
-            btn24.Text = "Bài 24";
-            btn24.UseVisualStyleBackColor = true;
-            // 
-            // btn25
-            // 
-            btn25.Location = new Point(255, 183);
-            btn25.Name = "btn25";
-            btn25.Size = new Size(75, 23);
-            btn25.TabIndex = 23;
-            btn25.Text = "Bài 25";
-            btn25.UseVisualStyleBackColor = true;
-            // 
-            // btn23
-            // 
-            btn23.Location = new Point(93, 183);
-            btn23.Name = "btn23";
-            btn23.Size = new Size(75, 23);
-            btn23.TabIndex = 22;
-            btn23.Text = "Bài 23";
-            btn23.UseVisualStyleBackColor = true;
-            // 
-            // btn22
-            // 
-            btn22.Location = new Point(12, 183);
-            btn22.Name = "btn22";
-            btn22.Size = new Size(75, 23);
-            btn22.TabIndex = 21;
-            btn22.Text = "Bài 22";
-            btn22.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -336,22 +198,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(584, 450);
+            ClientSize = new Size(584, 242);
             Controls.Add(label1);
-            Controls.Add(btn28);
-            Controls.Add(btn27);
-            Controls.Add(btn26);
-            Controls.Add(btn24);
-            Controls.Add(btn25);
-            Controls.Add(btn23);
-            Controls.Add(btn22);
-            Controls.Add(btn21);
-            Controls.Add(btn20);
-            Controls.Add(btn19);
-            Controls.Add(btn17);
-            Controls.Add(btn18);
-            Controls.Add(btn16);
-            Controls.Add(btn15);
             Controls.Add(btn14);
             Controls.Add(btn13);
             Controls.Add(btn12);
@@ -388,20 +236,6 @@
         private Button btn11;
         private Button btn9;
         private Button btn8;
-        private Button btn21;
-        private Button btn20;
-        private Button btn19;
-        private Button btn17;
-        private Button btn18;
-        private Button btn16;
-        private Button btn15;
-        private Button btn28;
-        private Button btn27;
-        private Button btn26;
-        private Button btn24;
-        private Button btn25;
-        private Button btn23;
-        private Button btn22;
         private Label label1;
     }
 }

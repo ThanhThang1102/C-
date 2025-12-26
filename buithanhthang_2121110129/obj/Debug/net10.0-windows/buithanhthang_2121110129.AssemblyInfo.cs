@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("buithanhthang_2121110129")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6fafcb6ed730b882d21f91115f2a4b289af709f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+372785fa38841f8a439f9fc2590d75a65a4f3e33")]
 [assembly: System.Reflection.AssemblyProductAttribute("buithanhthang_2121110129")]
 [assembly: System.Reflection.AssemblyTitleAttribute("buithanhthang_2121110129")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

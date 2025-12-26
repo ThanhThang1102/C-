@@ -72,5 +72,17 @@ namespace buithanhthang_2121110129
             Form12 f12 = new Form12();
             f12.Show();
         }
+
+        private void btn12_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+        }
+
+        private void btn13_Click(object sender, EventArgs e)
+        {
+            CustomerSignUp signUp = new CustomerSignUp();
+            signUp.Show();
+        }
     }
 }

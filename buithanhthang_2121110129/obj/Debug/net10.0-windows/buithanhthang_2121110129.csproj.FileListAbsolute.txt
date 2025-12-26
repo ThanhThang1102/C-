@@ -26,3 +26,4 @@ C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_21211101
 C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.Form8.resources
 C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.Form9.resources
 C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.Form12.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.Login.resources
