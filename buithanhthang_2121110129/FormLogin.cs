@@ -6,13 +6,18 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace buithanhthang_2121110129.Form
+namespace buithanhthang_2121110129
 {
     public partial class FormLogin : Form
     {
         public FormLogin()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

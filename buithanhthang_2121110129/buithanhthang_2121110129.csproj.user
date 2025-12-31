@@ -37,7 +37,10 @@
     <Compile Update="Form9.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form\FormLogin.cs">
+    <Compile Update="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -75,14 +75,19 @@ namespace buithanhthang_2121110129
 
         private void btn12_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
+            FormLogin fLogin = new FormLogin();
+            fLogin.Show();
         }
 
         private void btn13_Click(object sender, EventArgs e)
         {
-            CustomerSignUp signUp = new CustomerSignUp();
-            signUp.Show();
+            MainForm mainform = new MainForm();
+            mainform.Show();
+        }
+
+        private void btn14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

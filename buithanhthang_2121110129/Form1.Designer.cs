@@ -123,6 +123,7 @@
             btn14.TabIndex = 13;
             btn14.Text = "Bài 14";
             btn14.UseVisualStyleBackColor = true;
+            btn14.Click += btn14_Click;
             // 
             // btn13
             // 
