@@ -11,6 +11,7 @@ namespace buithanhthang_2121110129
         [DllImport("user32.dll")]
         private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
 
+        private bool isDarkMode = true;
         // Danh sách tất cả button menu để dễ quản lý highlight
         private List<Button> menuButtons;
 
@@ -24,10 +25,7 @@ namespace buithanhthang_2121110129
 
         private void ApplyCustomStyle()
         {
-            // Dark theme
-            this.pnlMove.BackColor = Color.FromArgb(30, 30, 30);
-            this.pnlControl.BackColor = Color.FromArgb(35, 35, 40);
-            this.pnlMain.BackColor = Color.FromArgb(45, 45, 48);
+            ApplyDarkMode();
 
             // Kéo form
             this.pnlMove.MouseDown += (s, e) =>
@@ -39,6 +37,23 @@ namespace buithanhthang_2121110129
                 }
             };
 
+            btnMaximize.Click += (s, e) =>
+            {
+                if (this.WindowState == FormWindowState.Normal)
+                {
+                    this.WindowState = FormWindowState.Maximized;
+                    btnMaximize.Text = "❐"; // Icon restore
+                }
+                else
+                {
+                    this.WindowState = FormWindowState.Normal;
+                    btnMaximize.Text = "☐"; // Icon maximize
+                }
+            };
+            btnMaximize.MouseEnter += (s, e) => btnMaximize.BackColor = Color.FromArgb(60, 60, 60);
+            btnMaximize.MouseLeave += (s, e) => btnMaximize.BackColor = Color.Transparent;
+
+            btnThemeToggle.Click += BtnThemeToggle_Click;
             // Style chung cho button menu
             StyleAllMenuButtons();
 
@@ -72,8 +87,6 @@ namespace buithanhthang_2121110129
                 btnImport,
                 btnStatistic,
                 btnStaff,
-                btnCalendar,
-                btnBrowser
             };
 
             // Gán sự kiện Click cho từng button
@@ -83,8 +96,6 @@ namespace buithanhthang_2121110129
             btnImport.Click += (s, e) => SelectMenuButton(btnImport, "Nhập hàng");
             btnStatistic.Click += (s, e) => SelectMenuButton(btnStatistic, "Thống kê");
             btnStaff.Click += (s, e) => SelectMenuButton(btnStaff, "Nhân viên");
-            btnCalendar.Click += (s, e) => SelectMenuButton(btnCalendar, "Lịch biểu");
-            btnBrowser.Click += (s, e) => SelectMenuButton(btnBrowser, "Trình duyệt");
 
             // Mặc định chọn Trang chủ
             SelectMenuButton(btnHomePage, "Trang chủ");
@@ -153,5 +164,48 @@ namespace buithanhthang_2121110129
         //     pnlMain.Controls.Add(form);
         //     form.Show();
         // }
+        private void BtnThemeToggle_Click(object sender, EventArgs e)
+        {
+            isDarkMode = !isDarkMode;
+            if (isDarkMode)
+            {
+                ApplyDarkMode();
+                btnThemeToggle.Text = "☀ Light";
+            }
+            else
+            {
+                ApplyLightMode();
+                btnThemeToggle.Text = "🌙 Dark";
+            }
+        }
+
+        private void ApplyDarkMode()
+        {
+            this.pnlMove.BackColor = Color.FromArgb(30, 30, 30);
+            this.pnlControl.BackColor = Color.FromArgb(35, 35, 40);
+            this.pnlMain.BackColor = Color.FromArgb(45, 45, 48);
+            this.BackColor = Color.FromArgb(30, 30, 30);
+
+            lblAppTitle.ForeColor = Color.White;
+            lblTabShow.ForeColor = Color.LightGray;
+            lblTime.ForeColor = Color.LightGray;
+        }
+
+        private void ApplyLightMode()
+        {
+            this.pnlMove.BackColor = Color.FromArgb(240, 240, 240);
+            this.pnlControl.BackColor = Color.FromArgb(255, 255, 255);
+            this.pnlMain.BackColor = Color.FromArgb(250, 250, 250);
+            this.BackColor = Color.FromArgb(245, 245, 245);
+
+            lblAppTitle.ForeColor = Color.Black;
+            lblTabShow.ForeColor = Color.Gray;
+            lblTime.ForeColor = Color.DarkGray;
+
+            foreach (Button btn in menuButtons)
+            {
+                btn.ForeColor = Color.Black;
+            }
+        }
     }
 }
