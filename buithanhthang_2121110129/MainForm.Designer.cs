@@ -34,7 +34,6 @@
             btnImport = new Button();
             btnStatistic = new Button();
             btnStaff = new Button();
-            lblTime = new Label();
             pnlMove = new Panel();
             btnMinimize = new Button();
             lblAppTitle = new Label();
@@ -43,6 +42,7 @@
             btnClose = new Button();
             btnMaximize = new Button();
             btnThemeToggle = new Button();
+            lblTime = new Label();
             monthCalendar1 = new MonthCalendar();
             timer = new System.Windows.Forms.Timer(components);
             pnlContainer.SuspendLayout();
@@ -92,6 +92,7 @@
             btnHomePage.Text = "  TRANG CHỦ";
             btnHomePage.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnHomePage.UseVisualStyleBackColor = true;
+            btnHomePage.Click += btnHomePage_Click;
             // 
             // btnProduct
             // 
@@ -147,15 +148,6 @@
             btnStaff.Text = "  NHÂN VIÊN";
             btnStaff.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnStaff.UseVisualStyleBackColor = true;
-            // 
-            // lblTime
-            // 
-            lblTime.AutoSize = true;
-            lblTime.Font = new Font("Segoe UI", 10F);
-            lblTime.ForeColor = Color.White;
-            lblTime.Location = new Point(480, 18);
-            lblTime.Name = "lblTime";
-            lblTime.Text = "";
             // 
             // pnlMove
             // 
@@ -246,6 +238,16 @@
             btnThemeToggle.Text = "☀ Light";
             btnThemeToggle.UseVisualStyleBackColor = false;
             // 
+            // lblTime
+            // 
+            lblTime.AutoSize = true;
+            lblTime.Font = new Font("Segoe UI", 10F);
+            lblTime.ForeColor = Color.White;
+            lblTime.Location = new Point(480, 18);
+            lblTime.Name = "lblTime";
+            lblTime.Size = new Size(0, 19);
+            lblTime.TabIndex = 5;
+            // 
             // monthCalendar1
             // 
             monthCalendar1.Location = new Point(0, 0);
@@ -266,7 +268,6 @@
             Text = "Quản Lý Siêu Thị Mini";
             pnlContainer.ResumeLayout(false);
             pnlControl.ResumeLayout(false);
-            pnlControl.PerformLayout();
             pnlMove.ResumeLayout(false);
             pnlMove.PerformLayout();
             ResumeLayout(false);

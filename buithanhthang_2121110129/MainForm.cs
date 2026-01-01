@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
-using System.Collections.Generic; // Thêm dòng này nếu chưa có
+using System.Collections.Generic;
+using buithanhthang_2121110129.UserControl; // Thêm dòng này nếu chưa có
 
 namespace buithanhthang_2121110129
 {
@@ -146,6 +147,10 @@ namespace buithanhthang_2121110129
             // LoadFormIntoPanel(new FormSanPham());
             // LoadFormIntoPanel(new FormBanHang());
         }
+        private void ShowTabUsing(string tabName)
+        {
+            lblTabShow.Text = $"Tab đang hiển thị: {tabName}";
+        }
 
         private void timer_Tick(object sender, EventArgs e)
         {
@@ -206,6 +211,12 @@ namespace buithanhthang_2121110129
             {
                 btn.ForeColor = Color.Black;
             }
+        }
+
+        private void btnHomePage_Click(object sender, EventArgs e)
+        {
+            ShowTabUsing(btnHomePage.Text);
+            UCHomePage.Instance.BringToFront();
         }
     }
 }

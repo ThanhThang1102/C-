@@ -1,9 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DocumentElement>
-  <information>
-    <address>Thủ Đức</address>
-    <email>admin@gmail.com</email>
-    <phone>(038) 498-0742</phone>
+	<information>
+		<address>Thủ Đức</address>
+		<email>admin@gmail.com</email>
+		<phone>(038) 498-0742</phone>
 
-  </information>
+		<link_map>https://maps.google.com</link_map>
+		<link_fb>https://facebook.com</link_fb>
+		<link_ig>https://instagram.com</link_ig>
+		<link_linkedin>https://linkedin.com</link_linkedin>
+		<link_ut>https://youtube.com</link_ut>
+		<link>
+			<map>https://maps.google.com</map>
+			<facebook>https://facebook.com</facebook>
+			<instagram>https://instagram.com</instagram>
+			<linkedin>https://linkedin.com</linkedin>
+			<youtube>https://youtube.com</youtube>
+		</link>
+	</information>
 </DocumentElement>

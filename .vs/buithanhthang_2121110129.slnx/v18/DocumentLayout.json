@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D200A29D-6DFE-ED91-9464-AE301C635C10}|buithanhthang_2121110129\\buithanhthang_2121110129.csproj|c:\\users\\bui thanh thang\\desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D200A29D-6DFE-ED91-9464-AE301C635C10}|buithanhthang_2121110129\\buithanhthang_2121110129.csproj|solutionrelative:buithanhthang_2121110129\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D200A29D-6DFE-ED91-9464-AE301C635C10}|buithanhthang_2121110129\\buithanhthang_2121110129.csproj|c:\\users\\bui thanh thang\\desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\usercontrol\\uchomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D200A29D-6DFE-ED91-9464-AE301C635C10}|buithanhthang_2121110129\\buithanhthang_2121110129.csproj|solutionrelative:buithanhthang_2121110129\\usercontrol\\uchomepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D200A29D-6DFE-ED91-9464-AE301C635C10}|buithanhthang_2121110129\\buithanhthang_2121110129.csproj|c:\\users\\bui thanh thang\\desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D200A29D-6DFE-ED91-9464-AE301C635C10}|buithanhthang_2121110129\\buithanhthang_2121110129.csproj|solutionrelative:buithanhthang_2121110129\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D200A29D-6DFE-ED91-9464-AE301C635C10}|buithanhthang_2121110129\\buithanhthang_2121110129.csproj|c:\\users\\bui thanh thang\\desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{D200A29D-6DFE-ED91-9464-AE301C635C10}|buithanhthang_2121110129\\buithanhthang_2121110129.csproj|solutionrelative:buithanhthang_2121110129\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D200A29D-6DFE-ED91-9464-AE301C635C10}|buithanhthang_2121110129\\buithanhthang_2121110129.csproj|C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D200A29D-6DFE-ED91-9464-AE301C635C10}|buithanhthang_2121110129\\buithanhthang_2121110129.csproj|solutionrelative:buithanhthang_2121110129\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D200A29D-6DFE-ED91-9464-AE301C635C10}|buithanhthang_2121110129\\buithanhthang_2121110129.csproj|c:\\users\\bui thanh thang\\desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D200A29D-6DFE-ED91-9464-AE301C635C10}|buithanhthang_2121110129\\buithanhthang_2121110129.csproj|solutionrelative:buithanhthang_2121110129\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D200A29D-6DFE-ED91-9464-AE301C635C10}|buithanhthang_2121110129\\buithanhthang_2121110129.csproj|C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -30,11 +38,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\MainForm.cs",
+              "RelativeDocumentMoniker": "buithanhthang_2121110129\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\MainForm.cs",
+              "RelativeToolTip": "buithanhthang_2121110129\\MainForm.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAIwFIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T03:04:51.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UCHomePage.cs",
+              "DocumentMoniker": "C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\UserControl\\UCHomePage.cs",
+              "RelativeDocumentMoniker": "buithanhthang_2121110129\\UserControl\\UCHomePage.cs",
+              "ToolTip": "C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\UserControl\\UCHomePage.cs",
+              "RelativeToolTip": "buithanhthang_2121110129\\UserControl\\UCHomePage.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T09:38:53.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "buithanhthang_2121110129\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\Properties\\Resources.resx",
+              "RelativeToolTip": "buithanhthang_2121110129\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-12-31T13:45:25.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\MainForm.cs",
               "RelativeDocumentMoniker": "buithanhthang_2121110129\\MainForm.cs",
@@ -46,33 +92,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\MainForm.cs",
-              "RelativeDocumentMoniker": "buithanhthang_2121110129\\MainForm.cs",
-              "ToolTip": "C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\MainForm.cs",
-              "RelativeToolTip": "buithanhthang_2121110129\\MainForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T03:04:51.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "buithanhthang_2121110129\\MainForm.Designer.cs",
               "ToolTip": "C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\MainForm.Designer.cs",
               "RelativeToolTip": "buithanhthang_2121110129\\MainForm.Designer.cs",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAowKkAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAPsAAAAAAAAAAAAAACoBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-31T02:23:33.441Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\Form1.cs",
               "RelativeDocumentMoniker": "buithanhthang_2121110129\\Form1.cs",
@@ -84,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Bui Thanh Thang\\Desktop\\buithanhthang_2121110129\\buithanhthang_2121110129\\Form1.cs",
               "RelativeDocumentMoniker": "buithanhthang_2121110129\\Form1.cs",
@@ -92,7 +125,8 @@
               "RelativeToolTip": "buithanhthang_2121110129\\Form1.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAAowFQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-12T06:25:02.55Z"
+              "WhenOpened": "2025-12-12T06:25:02.55Z",
+              "EditorCaption": ""
             }
           ]
         }

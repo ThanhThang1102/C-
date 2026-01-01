@@ -72,3 +72,8 @@ C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_21211101
 C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.MainForm.resources
 C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanh.32A9E6C7.Up2Date
 C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.Properties.Resources.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\bin\Debug\net10.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\bin\Debug\net10.0-windows\WinForms.DataVisualization.dll
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.FormCustomer.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.FormStoreInfomation.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.UserControl.UCHomePage.resources
