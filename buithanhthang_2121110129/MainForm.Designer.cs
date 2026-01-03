@@ -104,6 +104,7 @@
             btnProduct.Text = "  SẢN PHẨM";
             btnProduct.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnProduct.UseVisualStyleBackColor = true;
+            btnProduct.Click += btnProduct_Click;
             // 
             // btnOrder
             // 

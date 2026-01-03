@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace buithanhthang_2121110129.Enum
+﻿namespace buithanhthang_2121110129.Enum
 {
     /// <summary>
     /// Menu in Main Form

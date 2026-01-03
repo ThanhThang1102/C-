@@ -1,6 +1,8 @@
-﻿using System.Runtime.InteropServices;
+﻿using buithanhthang_2121110129.DTO;
+using buithanhthang_2121110129.Enum;
+using buithanhthang_2121110129.UserControl;
 using System.Collections.Generic;
-using buithanhthang_2121110129.UserControl; // Thêm dòng này nếu chưa có
+using System.Runtime.InteropServices;
 
 namespace buithanhthang_2121110129
 {
@@ -15,13 +17,22 @@ namespace buithanhthang_2121110129
         private bool isDarkMode = true;
         // Danh sách tất cả button menu để dễ quản lý highlight
         private List<Button> menuButtons;
+        public static Action LoadData;
+        public static Staff staff_using;
 
         public MainForm()
         {
             InitializeComponent();
+            cbSetting.DataSource = Enum.GetValues(typeof(SettingControl));
+
             InitializeMenuButtons();
             ApplyCustomStyle();
+            AddTabToControl();
+            SettingCallForLoadData();
 
+            LoadData.Invoke();
+
+            timer.Start();
         }
 
         private void ApplyCustomStyle()
@@ -140,7 +151,7 @@ namespace buithanhthang_2121110129
             selectedButton.BackColor = Color.FromArgb(0, 120, 215);
 
             // Cập nhật nhãn tab đang hiển thị
-            lblTabShow.Text = "Tab đang hiển thị: " + tabName;
+            //lblTabShow.Text = "Tab đang hiển thị: " + tabName;
 
             // Ở đây bạn sẽ load form con tương ứng vào pnlMain
             // Ví dụ:
@@ -159,16 +170,6 @@ namespace buithanhthang_2121110129
             lblTime.Font = new Font("Segoe UI", 10F);
         }
 
-        // Hàm hỗ trợ load form con (nếu bạn dùng MDI hoặc UserControl thì thay đổi phù hợp)
-        // private void LoadFormIntoPanel(Form form)
-        // {
-        //     pnlMain.Controls.Clear();
-        //     form.TopLevel = false;
-        //     form.FormBorderStyle = FormBorderStyle.None;
-        //     form.Dock = DockStyle.Fill;
-        //     pnlMain.Controls.Add(form);
-        //     form.Show();
-        // }
         private void BtnThemeToggle_Click(object sender, EventArgs e)
         {
             isDarkMode = !isDarkMode;
@@ -217,6 +218,123 @@ namespace buithanhthang_2121110129
         {
             ShowTabUsing(btnHomePage.Text);
             UCHomePage.Instance.BringToFront();
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            ShowTabUsing(btnProduct.Text);
+            UCProduct.Instance.BringToFront();
+        }
+        private void AddTabToControl()
+        {
+            pnlMain.Controls.Add(UCHomePage.Instance);
+            pnlMain.Controls.Add(UCImported.Instance);
+            pnlMain.Controls.Add(UCOrdered.Instance);
+            pnlMain.Controls.Add(UCProduct.Instance);
+            pnlMain.Controls.Add(UCStatistic.Instance);
+            pnlMain.Controls.Add(UCStaff.Instance);
+
+            ShowTabUsing(btnHomePage.Text);
+        }
+
+        private static void SettingCallForLoadData()
+        {
+            LoadData = UCProduct.Instance.LoadData;
+            LoadData += UCImported.Instance.LoadData;
+            LoadData += UCOrdered.Instance.LoadData;
+        }
+
+        #region TabControl
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát khỏi ứng dụng?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            ShowTabUsing(btnStaff.Text);
+            UCStaff.Instance.BringToFront();
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            ShowTabUsing(btnOrder.Text);
+            UCOrdered.Instance.BringToFront();
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            ShowTabUsing(btnImport.Text);
+            UCImported.Instance.BringToFront();
+        }
+
+        private void btnStatistic_Click(object sender, EventArgs e)
+        {
+            ShowTabUsing(btnStatistic.Text);
+            UCStatistic.Instance.BringToFront();
+        }
+
+        #endregion
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timer.Stop();
+        }
+
+        private void cbSetting_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch ((SettingControl)cbSetting.SelectedIndex)
+            {
+                case SettingControl.LOGIN:
+                    {
+                        if (staff_using == null)
+                        {
+                            new FormLogin().ShowDialog();
+                            UCHomePage.Instance.LoadStaffData(staff_using);
+                        }
+                        break;
+                    }
+                case SettingControl.LOGOUT:
+                    {
+                        if (staff_using == null)
+                            return;
+
+                        if (MessageBox.Show("Bạn có muốn kết thúc phiên đăng nhập không?", "THÔNG BÁO",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            staff_using = null;
+                            UCHomePage.Instance.LoadStaffData(staff_using);
+                        }
+                        break;
+                    }
+                case SettingControl.SUPPORT:
+                    {
+                        break;
+                    }
+                case SettingControl.INFORMATION:
+                    {
+                        MessageBox.Show(@"Chào!");
+                        break;
+                    }
+                case SettingControl.EXIT:
+                    {
+                        if (MessageBox.Show("Bạn có muốn tắt ứng dụng không?", "THÔNG BÁO",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            Application.Exit();
+                        }
+                        break;
+                    }
+            }
         }
     }
 }
