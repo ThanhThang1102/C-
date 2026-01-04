@@ -28,698 +28,700 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.gbYourInfor = new System.Windows.Forms.GroupBox();
-            this.btnChangeYourInfor = new System.Windows.Forms.Button();
-            this.lblYourGender = new System.Windows.Forms.Label();
-            this.lblYourName = new System.Windows.Forms.Label();
-            this.lblYourPhone = new System.Windows.Forms.Label();
-            this.picStaff = new System.Windows.Forms.PictureBox();
-            this.lblYourEmail = new System.Windows.Forms.Label();
-            this.pnlCustomer = new System.Windows.Forms.GroupBox();
-            this.btnReloadCustomer = new System.Windows.Forms.Button();
-            this.dgvCustomer = new System.Windows.Forms.DataGridView();
-            this.btnChangeCustomerInfor = new System.Windows.Forms.Button();
-            this.btnAddCustomer = new System.Windows.Forms.Button();
-            this.gbCustomerLevel = new System.Windows.Forms.GroupBox();
-            this.picCustomerLevel = new System.Windows.Forms.PictureBox();
-            this.dtCustomerDateJoin = new System.Windows.Forms.DateTimePicker();
-            this.txtCustomerName = new System.Windows.Forms.TextBox();
-            this.txtCustomerValue = new System.Windows.Forms.TextBox();
-            this.txtCustomerPhone = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.gbStoreContact = new System.Windows.Forms.GroupBox();
-            this.btnChangeStoreInfor = new System.Windows.Forms.Button();
-            this.picStoreLocation = new System.Windows.Forms.PictureBox();
-            this.pictContact = new System.Windows.Forms.PictureBox();
-            this.picYoutube = new System.Windows.Forms.PictureBox();
-            this.picLinkedIn = new System.Windows.Forms.PictureBox();
-            this.picInsta = new System.Windows.Forms.PictureBox();
-            this.picFace = new System.Windows.Forms.PictureBox();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.gbStoreInfor = new System.Windows.Forms.GroupBox();
-            this.gbStatisticProduct = new System.Windows.Forms.GroupBox();
-            this.chartProduct = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.gbProductNewImport = new System.Windows.Forms.GroupBox();
-            this.listBoxProductNewImport = new System.Windows.Forms.ListBox();
-            this.pnlValue = new System.Windows.Forms.Panel();
-            this.txtProfit = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtTotalSpending = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtTotalIncome = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtSpendingDay = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtIncomeDay = new System.Windows.Forms.TextBox();
-            this.btnReloadValue = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlMain.SuspendLayout();
-            this.gbYourInfor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picStaff)).BeginInit();
-            this.pnlCustomer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
-            this.gbCustomerLevel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCustomerLevel)).BeginInit();
-            this.gbStoreContact.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picStoreLocation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictContact)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picYoutube)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLinkedIn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInsta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFace)).BeginInit();
-            this.gbStoreInfor.SuspendLayout();
-            this.gbStatisticProduct.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartProduct)).BeginInit();
-            this.gbProductNewImport.SuspendLayout();
-            this.pnlValue.SuspendLayout();
-            this.SuspendLayout();
+            pnlMain = new Panel();
+            gbYourInfor = new GroupBox();
+            btnChangeYourInfor = new Button();
+            lblYourGender = new Label();
+            lblYourName = new Label();
+            lblYourPhone = new Label();
+            picStaff = new PictureBox();
+            lblYourEmail = new Label();
+            pnlCustomer = new GroupBox();
+            btnReloadCustomer = new Button();
+            dgvCustomer = new DataGridView();
+            btnChangeCustomerInfor = new Button();
+            btnAddCustomer = new Button();
+            gbCustomerLevel = new GroupBox();
+            picCustomerLevel = new PictureBox();
+            dtCustomerDateJoin = new DateTimePicker();
+            txtCustomerName = new TextBox();
+            txtCustomerValue = new TextBox();
+            txtCustomerPhone = new TextBox();
+            label8 = new Label();
+            label9 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            gbStoreContact = new GroupBox();
+            btnChangeStoreInfor = new Button();
+            picStoreLocation = new PictureBox();
+            pictContact = new PictureBox();
+            picYoutube = new PictureBox();
+            picLinkedIn = new PictureBox();
+            picInsta = new PictureBox();
+            picFace = new PictureBox();
+            lblPhone = new Label();
+            lblEmail = new Label();
+            lblAddress = new Label();
+            gbStoreInfor = new GroupBox();
+            gbStatisticProduct = new GroupBox();
+            chartProduct = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            gbProductNewImport = new GroupBox();
+            listBoxProductNewImport = new ListBox();
+            pnlValue = new Panel();
+            txtProfit = new TextBox();
+            label5 = new Label();
+            txtTotalSpending = new TextBox();
+            label4 = new Label();
+            txtTotalIncome = new TextBox();
+            label3 = new Label();
+            txtSpendingDay = new TextBox();
+            label2 = new Label();
+            txtIncomeDay = new TextBox();
+            btnReloadValue = new Button();
+            label1 = new Label();
+            pnlMain.SuspendLayout();
+            gbYourInfor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picStaff).BeginInit();
+            pnlCustomer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvCustomer).BeginInit();
+            gbCustomerLevel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picCustomerLevel).BeginInit();
+            gbStoreContact.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picStoreLocation).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictContact).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picYoutube).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picLinkedIn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picInsta).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picFace).BeginInit();
+            gbStoreInfor.SuspendLayout();
+            gbStatisticProduct.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)chartProduct).BeginInit();
+            gbProductNewImport.SuspendLayout();
+            pnlValue.SuspendLayout();
+            SuspendLayout();
             // 
             // pnlMain
             // 
-            this.pnlMain.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.pnlMain.Controls.Add(this.gbYourInfor);
-            this.pnlMain.Controls.Add(this.pnlCustomer);
-            this.pnlMain.Controls.Add(this.gbStoreContact);
-            this.pnlMain.Controls.Add(this.gbStoreInfor);
-            this.pnlMain.Location = new System.Drawing.Point(0, 0);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1350, 860);
-            this.pnlMain.TabIndex = 0;
+            pnlMain.BackColor = Color.DeepSkyBlue;
+            pnlMain.Controls.Add(gbYourInfor);
+            pnlMain.Controls.Add(pnlCustomer);
+            pnlMain.Controls.Add(gbStoreContact);
+            pnlMain.Controls.Add(gbStoreInfor);
+            pnlMain.Location = new Point(0, 0);
+            pnlMain.Name = "pnlMain";
+            pnlMain.Size = new Size(1350, 860);
+            pnlMain.TabIndex = 0;
             // 
             // gbYourInfor
             // 
-            this.gbYourInfor.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.gbYourInfor.Controls.Add(this.btnChangeYourInfor);
-            this.gbYourInfor.Controls.Add(this.lblYourGender);
-            this.gbYourInfor.Controls.Add(this.lblYourName);
-            this.gbYourInfor.Controls.Add(this.lblYourPhone);
-            this.gbYourInfor.Controls.Add(this.picStaff);
-            this.gbYourInfor.Controls.Add(this.lblYourEmail);
-            this.gbYourInfor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbYourInfor.ForeColor = System.Drawing.Color.White;
-            this.gbYourInfor.Location = new System.Drawing.Point(680, 590);
-            this.gbYourInfor.Name = "gbYourInfor";
-            this.gbYourInfor.Size = new System.Drawing.Size(667, 267);
-            this.gbYourInfor.TabIndex = 2;
-            this.gbYourInfor.TabStop = false;
-            this.gbYourInfor.Text = "Thông tin cá nhân";
+            gbYourInfor.BackColor = Color.CornflowerBlue;
+            gbYourInfor.Controls.Add(btnChangeYourInfor);
+            gbYourInfor.Controls.Add(lblYourGender);
+            gbYourInfor.Controls.Add(lblYourName);
+            gbYourInfor.Controls.Add(lblYourPhone);
+            gbYourInfor.Controls.Add(picStaff);
+            gbYourInfor.Controls.Add(lblYourEmail);
+            gbYourInfor.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gbYourInfor.ForeColor = Color.White;
+            gbYourInfor.Location = new Point(679, 456);
+            gbYourInfor.Name = "gbYourInfor";
+            gbYourInfor.Size = new Size(667, 267);
+            gbYourInfor.TabIndex = 2;
+            gbYourInfor.TabStop = false;
+            gbYourInfor.Text = "Thông tin cá nhân";
             // 
             // btnChangeYourInfor
             // 
-            this.btnChangeYourInfor.ForeColor = System.Drawing.Color.Black;
-            this.btnChangeYourInfor.Location = new System.Drawing.Point(195, 210);
-            this.btnChangeYourInfor.Name = "btnChangeYourInfor";
-            this.btnChangeYourInfor.Size = new System.Drawing.Size(466, 42);
-            this.btnChangeYourInfor.TabIndex = 20;
-            this.btnChangeYourInfor.Text = "Đổi thông tin cá nhân";
-            this.btnChangeYourInfor.UseVisualStyleBackColor = true;
-            this.btnChangeYourInfor.Click += new System.EventHandler(this.btnChangeYourInfor_Click);
+            btnChangeYourInfor.ForeColor = Color.Black;
+            btnChangeYourInfor.Location = new Point(195, 210);
+            btnChangeYourInfor.Name = "btnChangeYourInfor";
+            btnChangeYourInfor.Size = new Size(466, 42);
+            btnChangeYourInfor.TabIndex = 20;
+            btnChangeYourInfor.Text = "Đổi thông tin cá nhân";
+            btnChangeYourInfor.UseVisualStyleBackColor = true;
+            btnChangeYourInfor.Click += btnChangeYourInfor_Click;
             // 
             // lblYourGender
             // 
-            this.lblYourGender.AutoSize = true;
-            this.lblYourGender.ForeColor = System.Drawing.Color.White;
-            this.lblYourGender.Location = new System.Drawing.Point(190, 82);
-            this.lblYourGender.Name = "lblYourGender";
-            this.lblYourGender.Size = new System.Drawing.Size(72, 16);
-            this.lblYourGender.TabIndex = 23;
-            this.lblYourGender.Text = "Giới tính: ";
+            lblYourGender.AutoSize = true;
+            lblYourGender.ForeColor = Color.White;
+            lblYourGender.Location = new Point(190, 82);
+            lblYourGender.Name = "lblYourGender";
+            lblYourGender.Size = new Size(71, 16);
+            lblYourGender.TabIndex = 23;
+            lblYourGender.Text = "Giới tính: ";
             // 
             // lblYourName
             // 
-            this.lblYourName.AutoSize = true;
-            this.lblYourName.ForeColor = System.Drawing.Color.White;
-            this.lblYourName.Location = new System.Drawing.Point(190, 39);
-            this.lblYourName.Name = "lblYourName";
-            this.lblYourName.Size = new System.Drawing.Size(61, 16);
-            this.lblYourName.TabIndex = 22;
-            this.lblYourName.Text = "Họ tên: ";
+            lblYourName.AutoSize = true;
+            lblYourName.ForeColor = Color.White;
+            lblYourName.Location = new Point(190, 39);
+            lblYourName.Name = "lblYourName";
+            lblYourName.Size = new Size(60, 16);
+            lblYourName.TabIndex = 22;
+            lblYourName.Text = "Họ tên: ";
             // 
             // lblYourPhone
             // 
-            this.lblYourPhone.AutoSize = true;
-            this.lblYourPhone.ForeColor = System.Drawing.Color.White;
-            this.lblYourPhone.Location = new System.Drawing.Point(190, 168);
-            this.lblYourPhone.Name = "lblYourPhone";
-            this.lblYourPhone.Size = new System.Drawing.Size(107, 16);
-            this.lblYourPhone.TabIndex = 21;
-            this.lblYourPhone.Text = "Số điện thoại: ";
+            lblYourPhone.AutoSize = true;
+            lblYourPhone.ForeColor = Color.White;
+            lblYourPhone.Location = new Point(190, 168);
+            lblYourPhone.Name = "lblYourPhone";
+            lblYourPhone.Size = new Size(106, 16);
+            lblYourPhone.TabIndex = 21;
+            lblYourPhone.Text = "Số điện thoại: ";
             // 
             // picStaff
             // 
-            this.picStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.picStaff.Location = new System.Drawing.Point(18, 39);
-            this.picStaff.Name = "picStaff";
-            this.picStaff.Size = new System.Drawing.Size(150, 200);
-            this.picStaff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picStaff.TabIndex = 0;
-            this.picStaff.TabStop = false;
+            picStaff.BackColor = Color.FromArgb(224, 224, 224);
+            picStaff.Location = new Point(18, 39);
+            picStaff.Name = "picStaff";
+            picStaff.Size = new Size(150, 200);
+            picStaff.SizeMode = PictureBoxSizeMode.StretchImage;
+            picStaff.TabIndex = 0;
+            picStaff.TabStop = false;
             // 
             // lblYourEmail
             // 
-            this.lblYourEmail.AutoSize = true;
-            this.lblYourEmail.ForeColor = System.Drawing.Color.White;
-            this.lblYourEmail.Location = new System.Drawing.Point(190, 125);
-            this.lblYourEmail.Name = "lblYourEmail";
-            this.lblYourEmail.Size = new System.Drawing.Size(55, 16);
-            this.lblYourEmail.TabIndex = 20;
-            this.lblYourEmail.Text = "Email: ";
+            lblYourEmail.AutoSize = true;
+            lblYourEmail.ForeColor = Color.White;
+            lblYourEmail.Location = new Point(190, 125);
+            lblYourEmail.Name = "lblYourEmail";
+            lblYourEmail.Size = new Size(54, 16);
+            lblYourEmail.TabIndex = 20;
+            lblYourEmail.Text = "Email: ";
             // 
             // pnlCustomer
             // 
-            this.pnlCustomer.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.pnlCustomer.Controls.Add(this.btnReloadCustomer);
-            this.pnlCustomer.Controls.Add(this.dgvCustomer);
-            this.pnlCustomer.Controls.Add(this.btnChangeCustomerInfor);
-            this.pnlCustomer.Controls.Add(this.btnAddCustomer);
-            this.pnlCustomer.Controls.Add(this.gbCustomerLevel);
-            this.pnlCustomer.Controls.Add(this.dtCustomerDateJoin);
-            this.pnlCustomer.Controls.Add(this.txtCustomerName);
-            this.pnlCustomer.Controls.Add(this.txtCustomerValue);
-            this.pnlCustomer.Controls.Add(this.txtCustomerPhone);
-            this.pnlCustomer.Controls.Add(this.label8);
-            this.pnlCustomer.Controls.Add(this.label9);
-            this.pnlCustomer.Controls.Add(this.label6);
-            this.pnlCustomer.Controls.Add(this.label7);
-            this.pnlCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlCustomer.Location = new System.Drawing.Point(679, 3);
-            this.pnlCustomer.Name = "pnlCustomer";
-            this.pnlCustomer.Size = new System.Drawing.Size(668, 581);
-            this.pnlCustomer.TabIndex = 2;
-            this.pnlCustomer.TabStop = false;
-            this.pnlCustomer.Text = "Thông tin khách hàng";
+            pnlCustomer.BackColor = Color.LightSkyBlue;
+            pnlCustomer.Controls.Add(btnReloadCustomer);
+            pnlCustomer.Controls.Add(dgvCustomer);
+            pnlCustomer.Controls.Add(btnChangeCustomerInfor);
+            pnlCustomer.Controls.Add(btnAddCustomer);
+            pnlCustomer.Controls.Add(gbCustomerLevel);
+            pnlCustomer.Controls.Add(dtCustomerDateJoin);
+            pnlCustomer.Controls.Add(txtCustomerName);
+            pnlCustomer.Controls.Add(txtCustomerValue);
+            pnlCustomer.Controls.Add(txtCustomerPhone);
+            pnlCustomer.Controls.Add(label8);
+            pnlCustomer.Controls.Add(label9);
+            pnlCustomer.Controls.Add(label6);
+            pnlCustomer.Controls.Add(label7);
+            pnlCustomer.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            pnlCustomer.Location = new Point(679, 3);
+            pnlCustomer.Name = "pnlCustomer";
+            pnlCustomer.Size = new Size(668, 452);
+            pnlCustomer.TabIndex = 2;
+            pnlCustomer.TabStop = false;
+            pnlCustomer.Text = "Thông tin khách hàng";
             // 
             // btnReloadCustomer
             // 
-            this.btnReloadCustomer.ForeColor = System.Drawing.Color.Black;
-            this.btnReloadCustomer.Location = new System.Drawing.Point(6, 195);
-            this.btnReloadCustomer.Name = "btnReloadCustomer";
-            this.btnReloadCustomer.Size = new System.Drawing.Size(214, 42);
-            this.btnReloadCustomer.TabIndex = 34;
-            this.btnReloadCustomer.Text = "Tải lại thông tin";
-            this.btnReloadCustomer.UseVisualStyleBackColor = true;
-            this.btnReloadCustomer.Click += new System.EventHandler(this.btnReloadCustomer_Click);
+            btnReloadCustomer.ForeColor = Color.Black;
+            btnReloadCustomer.Location = new Point(6, 140);
+            btnReloadCustomer.Name = "btnReloadCustomer";
+            btnReloadCustomer.Size = new Size(146, 28);
+            btnReloadCustomer.TabIndex = 34;
+            btnReloadCustomer.Text = "Tải lại thông tin";
+            btnReloadCustomer.UseVisualStyleBackColor = true;
+            btnReloadCustomer.Click += btnReloadCustomer_Click;
             // 
             // dgvCustomer
             // 
-            this.dgvCustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomer.EnableHeadersVisualStyles = false;
-            this.dgvCustomer.Location = new System.Drawing.Point(6, 243);
-            this.dgvCustomer.Name = "dgvCustomer";
-            this.dgvCustomer.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCustomer.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCustomer.Size = new System.Drawing.Size(656, 332);
-            this.dgvCustomer.TabIndex = 33;
-            this.dgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellContentClick);
+            dgvCustomer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 0, 192);
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvCustomer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCustomer.EnableHeadersVisualStyles = false;
+            dgvCustomer.Location = new Point(6, 174);
+            dgvCustomer.Name = "dgvCustomer";
+            dgvCustomer.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvCustomer.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvCustomer.Size = new Size(656, 273);
+            dgvCustomer.TabIndex = 33;
+            dgvCustomer.CellContentClick += dgvCustomer_CellContentClick;
             // 
             // btnChangeCustomerInfor
             // 
-            this.btnChangeCustomerInfor.ForeColor = System.Drawing.Color.Black;
-            this.btnChangeCustomerInfor.Location = new System.Drawing.Point(452, 195);
-            this.btnChangeCustomerInfor.Name = "btnChangeCustomerInfor";
-            this.btnChangeCustomerInfor.Size = new System.Drawing.Size(209, 42);
-            this.btnChangeCustomerInfor.TabIndex = 32;
-            this.btnChangeCustomerInfor.Text = "Đổi thông tin khách hàng";
-            this.btnChangeCustomerInfor.UseVisualStyleBackColor = true;
-            this.btnChangeCustomerInfor.Click += new System.EventHandler(this.btnChangeCustomerInfor_Click);
+            btnChangeCustomerInfor.ForeColor = Color.Black;
+            btnChangeCustomerInfor.Location = new Point(303, 140);
+            btnChangeCustomerInfor.Name = "btnChangeCustomerInfor";
+            btnChangeCustomerInfor.Size = new Size(202, 28);
+            btnChangeCustomerInfor.TabIndex = 32;
+            btnChangeCustomerInfor.Text = "Đổi thông tin khách hàng";
+            btnChangeCustomerInfor.UseVisualStyleBackColor = true;
+            btnChangeCustomerInfor.Click += btnChangeCustomerInfor_Click;
             // 
             // btnAddCustomer
             // 
-            this.btnAddCustomer.ForeColor = System.Drawing.Color.Black;
-            this.btnAddCustomer.Location = new System.Drawing.Point(226, 195);
-            this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(220, 42);
-            this.btnAddCustomer.TabIndex = 24;
-            this.btnAddCustomer.Text = "Thêm khách hàng";
-            this.btnAddCustomer.UseVisualStyleBackColor = true;
-            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
+            btnAddCustomer.ForeColor = Color.Black;
+            btnAddCustomer.Location = new Point(158, 140);
+            btnAddCustomer.Name = "btnAddCustomer";
+            btnAddCustomer.Size = new Size(139, 28);
+            btnAddCustomer.TabIndex = 24;
+            btnAddCustomer.Text = "Thêm khách hàng";
+            btnAddCustomer.UseVisualStyleBackColor = true;
+            btnAddCustomer.Click += btnAddCustomer_Click;
             // 
             // gbCustomerLevel
             // 
-            this.gbCustomerLevel.Controls.Add(this.picCustomerLevel);
-            this.gbCustomerLevel.Location = new System.Drawing.Point(511, 39);
-            this.gbCustomerLevel.Name = "gbCustomerLevel";
-            this.gbCustomerLevel.Size = new System.Drawing.Size(150, 150);
-            this.gbCustomerLevel.TabIndex = 31;
-            this.gbCustomerLevel.TabStop = false;
-            this.gbCustomerLevel.Text = "Cấp độ";
+            gbCustomerLevel.Controls.Add(picCustomerLevel);
+            gbCustomerLevel.Location = new Point(512, 18);
+            gbCustomerLevel.Name = "gbCustomerLevel";
+            gbCustomerLevel.Size = new Size(150, 150);
+            gbCustomerLevel.TabIndex = 31;
+            gbCustomerLevel.TabStop = false;
+            gbCustomerLevel.Text = "Cấp độ";
             // 
             // picCustomerLevel
             // 
-            this.picCustomerLevel.BackColor = System.Drawing.Color.Thistle;
-            this.picCustomerLevel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picCustomerLevel.Location = new System.Drawing.Point(22, 30);
-            this.picCustomerLevel.Name = "picCustomerLevel";
-            this.picCustomerLevel.Size = new System.Drawing.Size(110, 110);
-            this.picCustomerLevel.TabIndex = 0;
-            this.picCustomerLevel.TabStop = false;
+            picCustomerLevel.BackColor = Color.Thistle;
+            picCustomerLevel.BackgroundImageLayout = ImageLayout.Stretch;
+            picCustomerLevel.Location = new Point(22, 26);
+            picCustomerLevel.Name = "picCustomerLevel";
+            picCustomerLevel.Size = new Size(110, 110);
+            picCustomerLevel.TabIndex = 0;
+            picCustomerLevel.TabStop = false;
             // 
             // dtCustomerDateJoin
             // 
-            this.dtCustomerDateJoin.Enabled = false;
-            this.dtCustomerDateJoin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtCustomerDateJoin.Location = new System.Drawing.Point(192, 114);
-            this.dtCustomerDateJoin.Name = "dtCustomerDateJoin";
-            this.dtCustomerDateJoin.Size = new System.Drawing.Size(313, 22);
-            this.dtCustomerDateJoin.TabIndex = 30;
+            dtCustomerDateJoin.Enabled = false;
+            dtCustomerDateJoin.Format = DateTimePickerFormat.Short;
+            dtCustomerDateJoin.Location = new Point(192, 80);
+            dtCustomerDateJoin.Name = "dtCustomerDateJoin";
+            dtCustomerDateJoin.Size = new Size(313, 22);
+            dtCustomerDateJoin.TabIndex = 30;
             // 
             // txtCustomerName
             // 
-            this.txtCustomerName.Location = new System.Drawing.Point(192, 39);
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.ReadOnly = true;
-            this.txtCustomerName.Size = new System.Drawing.Size(313, 22);
-            this.txtCustomerName.TabIndex = 29;
+            txtCustomerName.Location = new Point(192, 20);
+            txtCustomerName.Name = "txtCustomerName";
+            txtCustomerName.ReadOnly = true;
+            txtCustomerName.Size = new Size(313, 22);
+            txtCustomerName.TabIndex = 29;
             // 
             // txtCustomerValue
             // 
-            this.txtCustomerValue.Location = new System.Drawing.Point(192, 151);
-            this.txtCustomerValue.Name = "txtCustomerValue";
-            this.txtCustomerValue.ReadOnly = true;
-            this.txtCustomerValue.Size = new System.Drawing.Size(313, 22);
-            this.txtCustomerValue.TabIndex = 28;
+            txtCustomerValue.Location = new Point(192, 112);
+            txtCustomerValue.Name = "txtCustomerValue";
+            txtCustomerValue.ReadOnly = true;
+            txtCustomerValue.Size = new Size(313, 22);
+            txtCustomerValue.TabIndex = 28;
             // 
             // txtCustomerPhone
             // 
-            this.txtCustomerPhone.Location = new System.Drawing.Point(192, 77);
-            this.txtCustomerPhone.Name = "txtCustomerPhone";
-            this.txtCustomerPhone.ReadOnly = true;
-            this.txtCustomerPhone.Size = new System.Drawing.Size(313, 22);
-            this.txtCustomerPhone.TabIndex = 11;
+            txtCustomerPhone.Location = new Point(192, 49);
+            txtCustomerPhone.Name = "txtCustomerPhone";
+            txtCustomerPhone.ReadOnly = true;
+            txtCustomerPhone.Size = new Size(313, 22);
+            txtCustomerPhone.TabIndex = 11;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(15, 118);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 16);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "Ngày tham gia:";
+            label8.AutoSize = true;
+            label8.ForeColor = Color.Black;
+            label8.Location = new Point(15, 83);
+            label8.Name = "label8";
+            label8.Size = new Size(111, 16);
+            label8.TabIndex = 27;
+            label8.Text = "Ngày tham gia:";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(16, 156);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 16);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Giá trị tích lũy: ";
+            label9.AutoSize = true;
+            label9.ForeColor = Color.Black;
+            label9.Location = new Point(16, 115);
+            label9.Name = "label9";
+            label9.Size = new Size(108, 16);
+            label9.TabIndex = 26;
+            label9.Text = "Giá trị tích lũy: ";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(14, 42);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 16);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "Họ tên: ";
+            label6.AutoSize = true;
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(14, 23);
+            label6.Name = "label6";
+            label6.Size = new Size(60, 16);
+            label6.TabIndex = 25;
+            label6.Text = "Họ tên: ";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(15, 80);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 16);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Số điện thoại: ";
+            label7.AutoSize = true;
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(15, 52);
+            label7.Name = "label7";
+            label7.Size = new Size(106, 16);
+            label7.TabIndex = 24;
+            label7.Text = "Số điện thoại: ";
             // 
             // gbStoreContact
             // 
-            this.gbStoreContact.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.gbStoreContact.Controls.Add(this.btnChangeStoreInfor);
-            this.gbStoreContact.Controls.Add(this.picStoreLocation);
-            this.gbStoreContact.Controls.Add(this.pictContact);
-            this.gbStoreContact.Controls.Add(this.picYoutube);
-            this.gbStoreContact.Controls.Add(this.picLinkedIn);
-            this.gbStoreContact.Controls.Add(this.picInsta);
-            this.gbStoreContact.Controls.Add(this.picFace);
-            this.gbStoreContact.Controls.Add(this.lblPhone);
-            this.gbStoreContact.Controls.Add(this.lblEmail);
-            this.gbStoreContact.Controls.Add(this.lblAddress);
-            this.gbStoreContact.ForeColor = System.Drawing.Color.White;
-            this.gbStoreContact.Location = new System.Drawing.Point(3, 590);
-            this.gbStoreContact.Name = "gbStoreContact";
-            this.gbStoreContact.Size = new System.Drawing.Size(670, 267);
-            this.gbStoreContact.TabIndex = 1;
-            this.gbStoreContact.TabStop = false;
-            this.gbStoreContact.Text = "Cửa hàng";
+            gbStoreContact.BackColor = Color.CornflowerBlue;
+            gbStoreContact.Controls.Add(btnChangeStoreInfor);
+            gbStoreContact.Controls.Add(picStoreLocation);
+            gbStoreContact.Controls.Add(pictContact);
+            gbStoreContact.Controls.Add(picYoutube);
+            gbStoreContact.Controls.Add(picLinkedIn);
+            gbStoreContact.Controls.Add(picInsta);
+            gbStoreContact.Controls.Add(picFace);
+            gbStoreContact.Controls.Add(lblPhone);
+            gbStoreContact.Controls.Add(lblEmail);
+            gbStoreContact.Controls.Add(lblAddress);
+            gbStoreContact.ForeColor = Color.White;
+            gbStoreContact.Location = new Point(3, 456);
+            gbStoreContact.Name = "gbStoreContact";
+            gbStoreContact.Size = new Size(670, 267);
+            gbStoreContact.TabIndex = 1;
+            gbStoreContact.TabStop = false;
+            gbStoreContact.Text = "Cửa hàng";
             // 
             // btnChangeStoreInfor
             // 
-            this.btnChangeStoreInfor.ForeColor = System.Drawing.Color.Black;
-            this.btnChangeStoreInfor.Location = new System.Drawing.Point(412, 201);
-            this.btnChangeStoreInfor.Name = "btnChangeStoreInfor";
-            this.btnChangeStoreInfor.Size = new System.Drawing.Size(252, 60);
-            this.btnChangeStoreInfor.TabIndex = 11;
-            this.btnChangeStoreInfor.Text = "Đổi thông tin";
-            this.btnChangeStoreInfor.UseVisualStyleBackColor = true;
-            this.btnChangeStoreInfor.Click += new System.EventHandler(this.btnChangeStoreInfor_Click);
+            btnChangeStoreInfor.ForeColor = Color.Black;
+            btnChangeStoreInfor.Location = new Point(412, 201);
+            btnChangeStoreInfor.Name = "btnChangeStoreInfor";
+            btnChangeStoreInfor.Size = new Size(252, 60);
+            btnChangeStoreInfor.TabIndex = 11;
+            btnChangeStoreInfor.Text = "Đổi thông tin";
+            btnChangeStoreInfor.UseVisualStyleBackColor = true;
+            btnChangeStoreInfor.Click += btnChangeStoreInfor_Click;
             // 
             // picStoreLocation
             // 
-            this.picStoreLocation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picStoreLocation.Image = global::buithanhthang_2121110129.Properties.Resources.icons8_location_32;
-            this.picStoreLocation.Location = new System.Drawing.Point(6, 201);
-            this.picStoreLocation.Name = "picStoreLocation";
-            this.picStoreLocation.Size = new System.Drawing.Size(60, 60);
-            this.picStoreLocation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picStoreLocation.TabIndex = 19;
-            this.picStoreLocation.TabStop = false;
-            this.picStoreLocation.Click += new System.EventHandler(this.picStoreLocation_Click);
+            picStoreLocation.Cursor = Cursors.Hand;
+            picStoreLocation.Image = Properties.Resources.icons8_location_32;
+            picStoreLocation.Location = new Point(6, 201);
+            picStoreLocation.Name = "picStoreLocation";
+            picStoreLocation.Size = new Size(60, 60);
+            picStoreLocation.SizeMode = PictureBoxSizeMode.CenterImage;
+            picStoreLocation.TabIndex = 19;
+            picStoreLocation.TabStop = false;
+            picStoreLocation.Click += picStoreLocation_Click;
             // 
             // pictContact
             // 
-            this.pictContact.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictContact.Image = global::buithanhthang_2121110129.Properties.Resources.icons8_call_32;
-            this.pictContact.Location = new System.Drawing.Point(336, 201);
-            this.pictContact.Name = "pictContact";
-            this.pictContact.Size = new System.Drawing.Size(60, 60);
-            this.pictContact.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictContact.TabIndex = 18;
-            this.pictContact.TabStop = false;
-            this.pictContact.Click += new System.EventHandler(this.pictContact_Click);
+            pictContact.Cursor = Cursors.Hand;
+            pictContact.Image = Properties.Resources.icons8_call_32;
+            pictContact.Location = new Point(336, 201);
+            pictContact.Name = "pictContact";
+            pictContact.Size = new Size(60, 60);
+            pictContact.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictContact.TabIndex = 18;
+            pictContact.TabStop = false;
+            pictContact.Click += pictContact_Click;
             // 
             // picYoutube
             // 
-            this.picYoutube.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picYoutube.Image = global::buithanhthang_2121110129.Properties.Resources.icons8_YouTube_32;
-            this.picYoutube.Location = new System.Drawing.Point(270, 201);
-            this.picYoutube.Name = "picYoutube";
-            this.picYoutube.Size = new System.Drawing.Size(60, 60);
-            this.picYoutube.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picYoutube.TabIndex = 17;
-            this.picYoutube.TabStop = false;
-            this.picYoutube.Click += new System.EventHandler(this.picYoutube_Click);
+            picYoutube.Cursor = Cursors.Hand;
+            picYoutube.Image = Properties.Resources.icons8_YouTube_32;
+            picYoutube.Location = new Point(270, 201);
+            picYoutube.Name = "picYoutube";
+            picYoutube.Size = new Size(60, 60);
+            picYoutube.SizeMode = PictureBoxSizeMode.CenterImage;
+            picYoutube.TabIndex = 17;
+            picYoutube.TabStop = false;
+            picYoutube.Click += picYoutube_Click;
             // 
             // picLinkedIn
             // 
-            this.picLinkedIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picLinkedIn.Image = global::buithanhthang_2121110129.Properties.Resources.icons8_linkedin_32;
-            this.picLinkedIn.Location = new System.Drawing.Point(204, 201);
-            this.picLinkedIn.Name = "picLinkedIn";
-            this.picLinkedIn.Size = new System.Drawing.Size(60, 60);
-            this.picLinkedIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picLinkedIn.TabIndex = 16;
-            this.picLinkedIn.TabStop = false;
-            this.picLinkedIn.Click += new System.EventHandler(this.picLinkedIn_Click);
+            picLinkedIn.Cursor = Cursors.Hand;
+            picLinkedIn.Image = Properties.Resources.icons8_linkedin_32;
+            picLinkedIn.Location = new Point(204, 201);
+            picLinkedIn.Name = "picLinkedIn";
+            picLinkedIn.Size = new Size(60, 60);
+            picLinkedIn.SizeMode = PictureBoxSizeMode.CenterImage;
+            picLinkedIn.TabIndex = 16;
+            picLinkedIn.TabStop = false;
+            picLinkedIn.Click += picLinkedIn_Click;
             // 
             // picInsta
             // 
-            this.picInsta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picInsta.Image = global::buithanhthang_2121110129.Properties.Resources.icons8_Instagram_32;
-            this.picInsta.Location = new System.Drawing.Point(138, 201);
-            this.picInsta.Name = "picInsta";
-            this.picInsta.Size = new System.Drawing.Size(60, 60);
-            this.picInsta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picInsta.TabIndex = 15;
-            this.picInsta.TabStop = false;
-            this.picInsta.Click += new System.EventHandler(this.picInsta_Click);
+            picInsta.Cursor = Cursors.Hand;
+            picInsta.Image = Properties.Resources.icons8_Instagram_32;
+            picInsta.Location = new Point(138, 201);
+            picInsta.Name = "picInsta";
+            picInsta.Size = new Size(60, 60);
+            picInsta.SizeMode = PictureBoxSizeMode.CenterImage;
+            picInsta.TabIndex = 15;
+            picInsta.TabStop = false;
+            picInsta.Click += picInsta_Click;
             // 
             // picFace
             // 
-            this.picFace.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picFace.Image = global::buithanhthang_2121110129.Properties.Resources.icons8_facebook_48;
-            this.picFace.Location = new System.Drawing.Point(72, 201);
-            this.picFace.Name = "picFace";
-            this.picFace.Size = new System.Drawing.Size(60, 60);
-            this.picFace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picFace.TabIndex = 14;
-            this.picFace.TabStop = false;
-            this.picFace.Click += new System.EventHandler(this.picFace_Click);
+            picFace.Cursor = Cursors.Hand;
+            picFace.Image = Properties.Resources.icons8_facebook_48;
+            picFace.Location = new Point(72, 201);
+            picFace.Name = "picFace";
+            picFace.Size = new Size(60, 60);
+            picFace.SizeMode = PictureBoxSizeMode.CenterImage;
+            picFace.TabIndex = 14;
+            picFace.TabStop = false;
+            picFace.Click += picFace_Click;
             // 
             // lblPhone
             // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.ForeColor = System.Drawing.Color.White;
-            this.lblPhone.Location = new System.Drawing.Point(21, 168);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(146, 24);
-            this.lblPhone.TabIndex = 13;
-            this.lblPhone.Text = "Số điện thoại: ";
+            lblPhone.AutoSize = true;
+            lblPhone.ForeColor = Color.White;
+            lblPhone.Location = new Point(21, 168);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(146, 24);
+            lblPhone.TabIndex = 13;
+            lblPhone.Text = "Số điện thoại: ";
             // 
             // lblEmail
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(21, 125);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(74, 24);
-            this.lblEmail.TabIndex = 12;
-            this.lblEmail.Text = "Email: ";
+            lblEmail.AutoSize = true;
+            lblEmail.ForeColor = Color.White;
+            lblEmail.Location = new Point(21, 125);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(74, 24);
+            lblEmail.TabIndex = 12;
+            lblEmail.Text = "Email: ";
             // 
             // lblAddress
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.ForeColor = System.Drawing.Color.White;
-            this.lblAddress.Location = new System.Drawing.Point(21, 39);
-            this.lblAddress.MaximumSize = new System.Drawing.Size(450, 24);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(86, 24);
-            this.lblAddress.TabIndex = 11;
-            this.lblAddress.Text = "Địa chỉ: ";
+            lblAddress.AutoSize = true;
+            lblAddress.ForeColor = Color.White;
+            lblAddress.Location = new Point(21, 39);
+            lblAddress.MaximumSize = new Size(450, 24);
+            lblAddress.Name = "lblAddress";
+            lblAddress.Size = new Size(86, 24);
+            lblAddress.TabIndex = 11;
+            lblAddress.Text = "Địa chỉ: ";
             // 
             // gbStoreInfor
             // 
-            this.gbStoreInfor.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.gbStoreInfor.Controls.Add(this.gbStatisticProduct);
-            this.gbStoreInfor.Controls.Add(this.gbProductNewImport);
-            this.gbStoreInfor.Controls.Add(this.pnlValue);
-            this.gbStoreInfor.Location = new System.Drawing.Point(3, 3);
-            this.gbStoreInfor.Name = "gbStoreInfor";
-            this.gbStoreInfor.Size = new System.Drawing.Size(670, 581);
-            this.gbStoreInfor.TabIndex = 0;
-            this.gbStoreInfor.TabStop = false;
-            this.gbStoreInfor.Text = "Thông tin chung";
+            gbStoreInfor.BackColor = Color.LightSkyBlue;
+            gbStoreInfor.Controls.Add(gbStatisticProduct);
+            gbStoreInfor.Controls.Add(gbProductNewImport);
+            gbStoreInfor.Controls.Add(pnlValue);
+            gbStoreInfor.Location = new Point(3, 3);
+            gbStoreInfor.Name = "gbStoreInfor";
+            gbStoreInfor.Size = new Size(670, 452);
+            gbStoreInfor.TabIndex = 0;
+            gbStoreInfor.TabStop = false;
+            gbStoreInfor.Text = "Thông tin chung";
             // 
             // gbStatisticProduct
             // 
-            this.gbStatisticProduct.Controls.Add(this.chartProduct);
-            this.gbStatisticProduct.Location = new System.Drawing.Point(346, 274);
-            this.gbStatisticProduct.Name = "gbStatisticProduct";
-            this.gbStatisticProduct.Size = new System.Drawing.Size(318, 301);
-            this.gbStatisticProduct.TabIndex = 2;
-            this.gbStatisticProduct.TabStop = false;
-            this.gbStatisticProduct.Text = "Biểu đồ sản phẩm bán ra";
+            gbStatisticProduct.Controls.Add(chartProduct);
+            gbStatisticProduct.Location = new Point(346, 149);
+            gbStatisticProduct.Name = "gbStatisticProduct";
+            gbStatisticProduct.Size = new Size(318, 298);
+            gbStatisticProduct.TabIndex = 2;
+            gbStatisticProduct.TabStop = false;
+            gbStatisticProduct.Text = "Biểu đồ sản phẩm bán ra";
             // 
             // chartProduct
             // 
             chartArea1.Name = "ChartArea1";
-            this.chartProduct.ChartAreas.Add(chartArea1);
+            chartProduct.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chartProduct.Legends.Add(legend1);
-            this.chartProduct.Location = new System.Drawing.Point(6, 30);
-            this.chartProduct.Name = "chartProduct";
-            this.chartProduct.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            chartProduct.Legends.Add(legend1);
+            chartProduct.Location = new Point(6, 30);
+            chartProduct.Name = "chartProduct";
+            chartProduct.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chartProduct.Series.Add(series1);
-            this.chartProduct.Size = new System.Drawing.Size(306, 265);
-            this.chartProduct.TabIndex = 0;
-            this.chartProduct.Text = "Product";
+            chartProduct.Series.Add(series1);
+            chartProduct.Size = new Size(306, 262);
+            chartProduct.TabIndex = 0;
+            chartProduct.Text = "Product";
             // 
             // gbProductNewImport
             // 
-            this.gbProductNewImport.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.gbProductNewImport.Controls.Add(this.listBoxProductNewImport);
-            this.gbProductNewImport.Location = new System.Drawing.Point(346, 18);
-            this.gbProductNewImport.Name = "gbProductNewImport";
-            this.gbProductNewImport.Size = new System.Drawing.Size(318, 250);
-            this.gbProductNewImport.TabIndex = 1;
-            this.gbProductNewImport.TabStop = false;
-            this.gbProductNewImport.Text = "Sản phẩm mới nhập hàng";
+            gbProductNewImport.AccessibleRole = AccessibleRole.None;
+            gbProductNewImport.Controls.Add(listBoxProductNewImport);
+            gbProductNewImport.Location = new Point(346, 18);
+            gbProductNewImport.Name = "gbProductNewImport";
+            gbProductNewImport.Size = new Size(318, 130);
+            gbProductNewImport.TabIndex = 1;
+            gbProductNewImport.TabStop = false;
+            gbProductNewImport.Text = "Sản phẩm mới nhập hàng";
             // 
             // listBoxProductNewImport
             // 
-            this.listBoxProductNewImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxProductNewImport.FormattingEnabled = true;
-            this.listBoxProductNewImport.Location = new System.Drawing.Point(6, 30);
-            this.listBoxProductNewImport.Name = "listBoxProductNewImport";
-            this.listBoxProductNewImport.Size = new System.Drawing.Size(306, 186);
-            this.listBoxProductNewImport.TabIndex = 0;
+            listBoxProductNewImport.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            listBoxProductNewImport.FormattingEnabled = true;
+            listBoxProductNewImport.Location = new Point(6, 30);
+            listBoxProductNewImport.Name = "listBoxProductNewImport";
+            listBoxProductNewImport.Size = new Size(306, 95);
+            listBoxProductNewImport.TabIndex = 0;
             // 
             // pnlValue
             // 
-            this.pnlValue.BackColor = System.Drawing.Color.DarkCyan;
-            this.pnlValue.Controls.Add(this.txtProfit);
-            this.pnlValue.Controls.Add(this.label5);
-            this.pnlValue.Controls.Add(this.txtTotalSpending);
-            this.pnlValue.Controls.Add(this.label4);
-            this.pnlValue.Controls.Add(this.txtTotalIncome);
-            this.pnlValue.Controls.Add(this.label3);
-            this.pnlValue.Controls.Add(this.txtSpendingDay);
-            this.pnlValue.Controls.Add(this.label2);
-            this.pnlValue.Controls.Add(this.txtIncomeDay);
-            this.pnlValue.Controls.Add(this.btnReloadValue);
-            this.pnlValue.Controls.Add(this.label1);
-            this.pnlValue.Location = new System.Drawing.Point(6, 30);
-            this.pnlValue.Name = "pnlValue";
-            this.pnlValue.Size = new System.Drawing.Size(334, 545);
-            this.pnlValue.TabIndex = 0;
+            pnlValue.BackColor = Color.DarkCyan;
+            pnlValue.Controls.Add(txtProfit);
+            pnlValue.Controls.Add(label5);
+            pnlValue.Controls.Add(txtTotalSpending);
+            pnlValue.Controls.Add(label4);
+            pnlValue.Controls.Add(txtTotalIncome);
+            pnlValue.Controls.Add(label3);
+            pnlValue.Controls.Add(txtSpendingDay);
+            pnlValue.Controls.Add(label2);
+            pnlValue.Controls.Add(txtIncomeDay);
+            pnlValue.Controls.Add(btnReloadValue);
+            pnlValue.Controls.Add(label1);
+            pnlValue.Location = new Point(6, 30);
+            pnlValue.Name = "pnlValue";
+            pnlValue.Size = new Size(334, 417);
+            pnlValue.TabIndex = 0;
             // 
             // txtProfit
             // 
-            this.txtProfit.Location = new System.Drawing.Point(20, 410);
-            this.txtProfit.Name = "txtProfit";
-            this.txtProfit.ReadOnly = true;
-            this.txtProfit.Size = new System.Drawing.Size(290, 29);
-            this.txtProfit.TabIndex = 10;
+            txtProfit.Location = new Point(20, 339);
+            txtProfit.Name = "txtProfit";
+            txtProfit.ReadOnly = true;
+            txtProfit.Size = new Size(290, 29);
+            txtProfit.TabIndex = 10;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(15, 368);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 24);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Lợi nhuận";
+            label5.AutoSize = true;
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(15, 311);
+            label5.Name = "label5";
+            label5.Size = new Size(103, 24);
+            label5.TabIndex = 9;
+            label5.Text = "Lợi nhuận";
             // 
             // txtTotalSpending
             // 
-            this.txtTotalSpending.Location = new System.Drawing.Point(20, 321);
-            this.txtTotalSpending.Name = "txtTotalSpending";
-            this.txtTotalSpending.ReadOnly = true;
-            this.txtTotalSpending.Size = new System.Drawing.Size(290, 29);
-            this.txtTotalSpending.TabIndex = 8;
+            txtTotalSpending.Location = new Point(20, 259);
+            txtTotalSpending.Name = "txtTotalSpending";
+            txtTotalSpending.ReadOnly = true;
+            txtTotalSpending.Size = new Size(290, 29);
+            txtTotalSpending.TabIndex = 8;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(15, 279);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 24);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Tổng chi tiêu";
+            label4.AutoSize = true;
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(15, 231);
+            label4.Name = "label4";
+            label4.Size = new Size(133, 24);
+            label4.TabIndex = 7;
+            label4.Text = "Tổng chi tiêu";
             // 
             // txtTotalIncome
             // 
-            this.txtTotalIncome.Location = new System.Drawing.Point(20, 232);
-            this.txtTotalIncome.Name = "txtTotalIncome";
-            this.txtTotalIncome.ReadOnly = true;
-            this.txtTotalIncome.Size = new System.Drawing.Size(290, 29);
-            this.txtTotalIncome.TabIndex = 6;
+            txtTotalIncome.Location = new Point(20, 177);
+            txtTotalIncome.Name = "txtTotalIncome";
+            txtTotalIncome.ReadOnly = true;
+            txtTotalIncome.Size = new Size(290, 29);
+            txtTotalIncome.TabIndex = 6;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(15, 190);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 24);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Tổng thu nhập";
+            label3.AutoSize = true;
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(15, 149);
+            label3.Name = "label3";
+            label3.Size = new Size(147, 24);
+            label3.TabIndex = 5;
+            label3.Text = "Tổng thu nhập";
             // 
             // txtSpendingDay
             // 
-            this.txtSpendingDay.Location = new System.Drawing.Point(20, 143);
-            this.txtSpendingDay.Name = "txtSpendingDay";
-            this.txtSpendingDay.ReadOnly = true;
-            this.txtSpendingDay.Size = new System.Drawing.Size(290, 29);
-            this.txtSpendingDay.TabIndex = 4;
+            txtSpendingDay.Location = new Point(20, 100);
+            txtSpendingDay.Name = "txtSpendingDay";
+            txtSpendingDay.ReadOnly = true;
+            txtSpendingDay.Size = new Size(290, 29);
+            txtSpendingDay.TabIndex = 4;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(15, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 24);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Chi tiêu trong ngày";
+            label2.AutoSize = true;
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(15, 72);
+            label2.Name = "label2";
+            label2.Size = new Size(186, 24);
+            label2.TabIndex = 3;
+            label2.Text = "Chi tiêu trong ngày";
             // 
             // txtIncomeDay
             // 
-            this.txtIncomeDay.Location = new System.Drawing.Point(20, 54);
-            this.txtIncomeDay.Name = "txtIncomeDay";
-            this.txtIncomeDay.ReadOnly = true;
-            this.txtIncomeDay.Size = new System.Drawing.Size(290, 29);
-            this.txtIncomeDay.TabIndex = 2;
+            txtIncomeDay.Location = new Point(20, 33);
+            txtIncomeDay.Name = "txtIncomeDay";
+            txtIncomeDay.ReadOnly = true;
+            txtIncomeDay.Size = new Size(290, 29);
+            txtIncomeDay.TabIndex = 2;
             // 
             // btnReloadValue
             // 
-            this.btnReloadValue.Location = new System.Drawing.Point(59, 491);
-            this.btnReloadValue.Name = "btnReloadValue";
-            this.btnReloadValue.Size = new System.Drawing.Size(214, 39);
-            this.btnReloadValue.TabIndex = 1;
-            this.btnReloadValue.Text = "Lọc lại";
-            this.btnReloadValue.UseVisualStyleBackColor = true;
-            this.btnReloadValue.Click += new System.EventHandler(this.btnReloadValue_Click);
+            btnReloadValue.Location = new Point(66, 372);
+            btnReloadValue.Name = "btnReloadValue";
+            btnReloadValue.Size = new Size(214, 39);
+            btnReloadValue.TabIndex = 1;
+            btnReloadValue.Text = "Lọc lại";
+            btnReloadValue.UseVisualStyleBackColor = true;
+            btnReloadValue.Click += btnReloadValue_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(15, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Thu nhập trong ngày";
+            label1.AutoSize = true;
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(15, 5);
+            label1.Name = "label1";
+            label1.Size = new Size(205, 24);
+            label1.TabIndex = 0;
+            label1.Text = "Thu nhập trong ngày";
             // 
             // UCHomePage
             // 
-            this.Controls.Add(this.pnlMain);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.Name = "UCHomePage";
-            this.Size = new System.Drawing.Size(1350, 860);
-            this.pnlMain.ResumeLayout(false);
-            this.gbYourInfor.ResumeLayout(false);
-            this.gbYourInfor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picStaff)).EndInit();
-            this.pnlCustomer.ResumeLayout(false);
-            this.pnlCustomer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
-            this.gbCustomerLevel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picCustomerLevel)).EndInit();
-            this.gbStoreContact.ResumeLayout(false);
-            this.gbStoreContact.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picStoreLocation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictContact)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picYoutube)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLinkedIn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInsta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFace)).EndInit();
-            this.gbStoreInfor.ResumeLayout(false);
-            this.gbStatisticProduct.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartProduct)).EndInit();
-            this.gbProductNewImport.ResumeLayout(false);
-            this.pnlValue.ResumeLayout(false);
-            this.pnlValue.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(12F, 24F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(pnlMain);
+            Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Margin = new Padding(7, 6, 7, 6);
+            Name = "UCHomePage";
+            Size = new Size(1350, 860);
+            pnlMain.ResumeLayout(false);
+            gbYourInfor.ResumeLayout(false);
+            gbYourInfor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picStaff).EndInit();
+            pnlCustomer.ResumeLayout(false);
+            pnlCustomer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvCustomer).EndInit();
+            gbCustomerLevel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)picCustomerLevel).EndInit();
+            gbStoreContact.ResumeLayout(false);
+            gbStoreContact.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picStoreLocation).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictContact).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picYoutube).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picLinkedIn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picInsta).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picFace).EndInit();
+            gbStoreInfor.ResumeLayout(false);
+            gbStatisticProduct.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)chartProduct).EndInit();
+            gbProductNewImport.ResumeLayout(false);
+            pnlValue.ResumeLayout(false);
+            pnlValue.PerformLayout();
+            ResumeLayout(false);
 
         }
 

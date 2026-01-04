@@ -77,3 +77,13 @@ C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_21211101
 C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.FormCustomer.resources
 C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.FormStoreInfomation.resources
 C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.UserControl.UCHomePage.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.FormBill.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.FormProduct.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.FormStaff.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.FormSupplier.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.FormSupplierSynthetic.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.UserControl.UCProduct.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.UserControl.UCProductItem.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\bin\Debug\net10.0-windows\Data\StoreInformation.xml
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\bin\Debug\net10.0-windows\Data\Account.xml
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.UserControl.UCImported.resources

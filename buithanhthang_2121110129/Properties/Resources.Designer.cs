@@ -73,9 +73,29 @@ namespace buithanhthang_2121110129.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Copper {
+            get {
+                object obj = ResourceManager.GetObject("Copper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap go_back_64px {
             get {
                 object obj = ResourceManager.GetObject("go_back_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Golden {
+            get {
+                object obj = ResourceManager.GetObject("Golden", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +256,36 @@ namespace buithanhthang_2121110129.Properties {
         internal static System.Drawing.Bitmap icons8_YouTube_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_YouTube_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap None {
+            get {
+                object obj = ResourceManager.GetObject("None", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Platinum {
+            get {
+                object obj = ResourceManager.GetObject("Platinum", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Silver {
+            get {
+                object obj = ResourceManager.GetObject("Silver", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

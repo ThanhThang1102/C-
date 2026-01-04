@@ -45,7 +45,7 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             lblTitle.ForeColor = Color.FromArgb(33, 37, 41);
-            lblTitle.Location = new Point(0, 28);
+            lblTitle.Location = new Point(115, 27);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(292, 32);
             lblTitle.TabIndex = 0;
@@ -115,6 +115,7 @@
             btnSupport.TabIndex = 6;
             btnSupport.Text = "Hỗ trợ";
             btnSupport.UseVisualStyleBackColor = false;
+            btnSupport.Click += BtnSupport_Click;
             // 
             // btnLogin
             // 
@@ -164,6 +165,11 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void BtnSupport_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
         #endregion
 

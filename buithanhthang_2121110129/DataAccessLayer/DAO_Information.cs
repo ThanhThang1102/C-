@@ -16,11 +16,16 @@ namespace buithanhthang_2121110129.DataAccessLayer
 
         public DAO_Information(string fileName)
         {
-            path = path.Replace("bin", "Data/");
-            using_path = path + fileName;
+            using_path = Path.Combine(
+                AppDomain.CurrentDomain.BaseDirectory,
+                "Data",
+                fileName
+            );
+
             doc.Load(using_path);
             root = doc.DocumentElement;
         }
+
 
         /// <summary>
         /// Get new information of store

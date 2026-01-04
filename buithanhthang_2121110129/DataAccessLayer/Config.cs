@@ -13,7 +13,12 @@ namespace buithanhthang_2121110129.DataAccessLayer
 
         public static string getSQLConnectionString()
         {
-            return $"Data Source={serverName};Initial Catalog={databaseName};Integrated Security=True";
+            return
+                $"Data Source={serverName};" +
+                $"Initial Catalog={databaseName};" +
+                $"Integrated Security=True;" +
+                $"Encrypt=False;" +
+                $"TrustServerCertificate=True;";
         }
 
         public static string getSQLConnectionStringWithUser()

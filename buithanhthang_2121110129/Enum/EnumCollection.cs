@@ -72,5 +72,15 @@
         Expiration_Soon,
         Expired
     }
+
+    public enum ButtonControl
+    { 
+        Home,
+        Product,
+        Order,
+        Import,
+        Statistic,
+        Staff
+    }
 }
 

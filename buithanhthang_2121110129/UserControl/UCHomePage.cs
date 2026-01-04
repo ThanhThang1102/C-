@@ -1,6 +1,7 @@
 ﻿using buithanhthang_2121110129.BusinessLogicLayer;
 using buithanhthang_2121110129.DataAccessLayer;
 using buithanhthang_2121110129.DTO;
+using buithanhthang_2121110129.Enum;
 using buithanhthang_2121110129.Functions;
 using System;
 using System.Collections.Generic;
@@ -246,11 +247,25 @@ namespace buithanhthang_2121110129.UserControl
         /// </summary>
         /// <param name="level"></param>
         /// <returns></returns>
+        //private Image LoadLevelCustomer(string level)
+        //{
+        //    string path = Path.GetDirectoryName(Directory.GetCurrentDirectory());
+        //    path = path.Replace("bin", "Resources/") + level.Trim() + ".png";
+        //    return Image.FromFile(path);
+        //}
         private Image LoadLevelCustomer(string level)
         {
-            string path = Path.GetDirectoryName(Directory.GetCurrentDirectory());
-            path = path.Replace("bin", "Resources/") + level.Trim() + ".png";
-            return Image.FromFile(path);
+            if (!System.Enum.TryParse(level, true, out Level customerLevel))
+                return Properties.Resources.None;
+
+            return customerLevel switch
+            {
+                Level.Copper => Properties.Resources.Copper,
+                Level.Silver => Properties.Resources.Silver,
+                Level.Golden => Properties.Resources.Golden,
+                Level.Platinum => Properties.Resources.Platinum,
+                _ => Properties.Resources.None
+            };
         }
 
         private void btnReloadCustomer_Click(object sender, EventArgs e)
