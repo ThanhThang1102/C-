@@ -80,7 +80,10 @@ namespace buithanhthang_2121110129.DataAccessLayer
         public double? GetValueOfAllBills()
         {
             string query = $"select sum(x.value) from {typeBill} x";
-            return (double?)DataProvider.Instance.ExecuteScalar(query, CommandType.Text, null);
+            object result = DataProvider.Instance.ExecuteScalar(query, CommandType.Text);
+            return result == DBNull.Value ? null : (double?)Convert.ToDouble(result);
+
+            //return (double?)DataProvider.Instance.ExecuteScalar(query, CommandType.Text, null);
         }
 
         public double? GetValueOfAllBills_Day(DateTime date)

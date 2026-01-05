@@ -35,7 +35,6 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             pnlMain = new Panel();
             gbYourInfor = new GroupBox();
-            btnChangeYourInfor = new Button();
             lblYourGender = new Label();
             lblYourName = new Label();
             lblYourPhone = new Label();
@@ -114,13 +113,12 @@
             pnlMain.Controls.Add(gbStoreInfor);
             pnlMain.Location = new Point(0, 0);
             pnlMain.Name = "pnlMain";
-            pnlMain.Size = new Size(1350, 860);
+            pnlMain.Size = new Size(1350, 768);
             pnlMain.TabIndex = 0;
             // 
             // gbYourInfor
             // 
             gbYourInfor.BackColor = Color.CornflowerBlue;
-            gbYourInfor.Controls.Add(btnChangeYourInfor);
             gbYourInfor.Controls.Add(lblYourGender);
             gbYourInfor.Controls.Add(lblYourName);
             gbYourInfor.Controls.Add(lblYourPhone);
@@ -134,17 +132,6 @@
             gbYourInfor.TabIndex = 2;
             gbYourInfor.TabStop = false;
             gbYourInfor.Text = "Thông tin cá nhân";
-            // 
-            // btnChangeYourInfor
-            // 
-            btnChangeYourInfor.ForeColor = Color.Black;
-            btnChangeYourInfor.Location = new Point(195, 210);
-            btnChangeYourInfor.Name = "btnChangeYourInfor";
-            btnChangeYourInfor.Size = new Size(466, 42);
-            btnChangeYourInfor.TabIndex = 20;
-            btnChangeYourInfor.Text = "Đổi thông tin cá nhân";
-            btnChangeYourInfor.UseVisualStyleBackColor = true;
-            btnChangeYourInfor.Click += btnChangeYourInfor_Click;
             // 
             // lblYourGender
             // 
@@ -697,7 +684,7 @@
             Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Margin = new Padding(7, 6, 7, 6);
             Name = "UCHomePage";
-            Size = new Size(1350, 860);
+            Size = new Size(1350, 768);
             pnlMain.ResumeLayout(false);
             gbYourInfor.ResumeLayout(false);
             gbYourInfor.PerformLayout();
@@ -758,7 +745,6 @@
         private System.Windows.Forms.Button btnReloadValue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartProduct;
-        private System.Windows.Forms.Button btnChangeYourInfor;
         private System.Windows.Forms.Label lblYourGender;
         private System.Windows.Forms.Label lblYourName;
         private System.Windows.Forms.Label lblYourPhone;

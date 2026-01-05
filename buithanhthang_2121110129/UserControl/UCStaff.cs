@@ -36,6 +36,7 @@ namespace buithanhthang_2121110129.UserControl
         public UCStaff()
         {
             InitializeComponent();
+            _staff = new Staff();
 
             bus_staff = new BUS_Staff();
             bus_account = new BUS_Account();
@@ -43,7 +44,6 @@ namespace buithanhthang_2121110129.UserControl
             LoadContentCombobox();
 
             LoadData();
-            _staff = new Staff();
         }
 
         private void LoadData()
@@ -76,11 +76,32 @@ namespace buithanhthang_2121110129.UserControl
             dgvContracts.DataSource = null;
         }
 
+        private Dictionary<Spells, string> spellsText =
+           new Dictionary<Spells, string>()
+        {
+            { Spells.morning, "Ca sáng" },
+            { Spells.afternoon, "Ca chiều" },
+            { Spells.night, "Ca tối" }
+        };
+        private Dictionary<StatusOfContract, string> contractStatusText =
+            new Dictionary<StatusOfContract, string>()
+        {
+            { StatusOfContract.Unexpired, "Còn hạn" },
+            { StatusOfContract.Expiration_Soon, "Sắp hết hạn" },
+            { StatusOfContract.Expired, "Đã hết hạn" }
+        };
+
+
         private void LoadContentCombobox()
         {
             cbTypeWork.DataSource = System.Enum.GetValues(typeof(TypeWork));
-            cbSpells.DataSource = System.Enum.GetValues(typeof(Spells));
-            cbDateContract.DataSource = System.Enum.GetValues(typeof(StatusOfContract));
+            cbSpells.DataSource = new BindingSource(spellsText, null);
+            cbSpells.DisplayMember = "Value";
+            cbSpells.ValueMember = "Key";
+            cbDateContract.DataSource = new BindingSource(contractStatusText, null);
+            cbDateContract.DisplayMember = "Value";
+            cbDateContract.ValueMember = "Key";
+
         }
 
         private DataTable getTableFilter(DataTable table, DataTable table_filter)
@@ -269,9 +290,14 @@ namespace buithanhthang_2121110129.UserControl
 
         private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
+            if (dgvStaff.CurrentRow == null) return;
             ClearStaffSecretInformation();
-
+            var id = dgvStaff.CurrentRow.Cells[0].Value?.ToString();
+            if (string.IsNullOrEmpty(id)) return;
             _staff = bus_staff.GetStaff(dgvStaff.CurrentRow.Cells[0].Value.ToString()); // Id cell
+            //_staff = bus_staff.GetStaff(id);
+            //if (_staff == null) return;
 
             txtName.Text = _staff.Name;
             txtGender.Text = _staff.Gender;

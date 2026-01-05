@@ -87,3 +87,6 @@ C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_21211101
 C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\bin\Debug\net10.0-windows\Data\StoreInformation.xml
 C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\bin\Debug\net10.0-windows\Data\Account.xml
 C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.UserControl.UCImported.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.UserControl.UCStaff.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.UserControl.UCOrdered.resources
+C:\Users\Bui Thanh Thang\Desktop\buithanhthang_2121110129\buithanhthang_2121110129\obj\Debug\net10.0-windows\buithanhthang_2121110129.UserControl.UCStatistic.resources

@@ -68,11 +68,6 @@ namespace buithanhthang_2121110129.UserControl
             new FormStoreInfomation().ShowDialog();
         }
 
-        private void btnChangeYourInfor_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
             new FormCustomer().ShowDialog();

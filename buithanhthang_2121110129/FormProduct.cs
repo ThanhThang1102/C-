@@ -74,9 +74,15 @@ namespace buithanhthang_2121110129
 
         private void btnChooseImage_Click(object sender, EventArgs e)
         {
+            openFileDialog.Title = "Chọn ảnh sản phẩm";
+            openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
+
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                picRepresent.Image = Image.FromFile(openFileDialog.FileName);
+                using (var fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+                {
+                    picRepresent.Image = Image.FromStream(fs);
+                }
             }
         }
 

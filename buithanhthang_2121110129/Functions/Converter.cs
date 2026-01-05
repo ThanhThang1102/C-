@@ -14,7 +14,10 @@ namespace buithanhthang_2121110129.Functions
 
             using (MemoryStream ms = new MemoryStream())
             {
-                image.Save(ms, ImageFormat.Png);
+                using (Bitmap bmp = new Bitmap(image))
+                {
+                    bmp.Save(ms, ImageFormat.Png);
+                }
                 return ms.ToArray();
             }
         }
@@ -26,7 +29,8 @@ namespace buithanhthang_2121110129.Functions
 
             using (MemoryStream ms = new MemoryStream(data))
             {
-                return Image.FromStream(ms);
+                Image img = Image.FromStream(ms);
+                return new Bitmap(img); // ✅ clone -> cắt liên kết stream
             }
         }
     }

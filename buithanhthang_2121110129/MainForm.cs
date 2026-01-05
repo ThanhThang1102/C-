@@ -23,8 +23,9 @@ namespace buithanhthang_2121110129
             cbMenu.Items.Add("NHÂN VIÊN");
             cbMenu.SelectedIndex = 0;
 
-            // Setting menu
-            cbSetting.DataSource = System.Enum.GetValues(typeof(SettingControl));
+            cbSetting.DataSource = new BindingSource(settingText, null);
+            cbSetting.DisplayMember = "Value";
+            cbSetting.ValueMember = "Key";
 
             AddTabToControl();
             SettingCallForLoadData();
@@ -109,6 +110,15 @@ namespace buithanhthang_2121110129
             timer.Stop();
         }
 
+        private Dictionary<SettingControl, string> settingText =
+            new Dictionary<SettingControl, string>()
+        {
+            { SettingControl.LOGIN, "Đăng nhập" },
+            { SettingControl.LOGOUT, "Đăng xuất" },
+            { SettingControl.SUPPORT, "Hỗ trợ" },
+            { SettingControl.INFORMATION, "Thông tin" },
+            { SettingControl.EXIT, "Thoát" }
+        };
 
         private void cbSetting_SelectedIndexChanged(object sender, EventArgs e)
         {
