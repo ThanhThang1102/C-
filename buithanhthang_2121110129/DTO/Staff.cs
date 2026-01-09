@@ -29,7 +29,7 @@ namespace buithanhthang_2121110129.DTO
 
         public Staff()
         {
-            this.iD = GetFormatString.MakingIDNow();
+            this.iD = "";
             this.name = "";
             this.gender = "nam";
             this.dateOfBirth = new DateTime(2000, 1, 1);

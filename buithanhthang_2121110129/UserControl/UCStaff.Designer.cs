@@ -284,7 +284,7 @@
             dtPickDoB.Name = "dtPickDoB";
             dtPickDoB.Size = new Size(186, 22);
             dtPickDoB.TabIndex = 29;
-            dtPickDoB.Value = new DateTime(2000, 1, 1, 0, 0, 0, 0);
+            dtPickDoB.Value = new DateTime(2026, 1, 9, 0, 0, 0, 0);
             // 
             // txtPhone
             // 

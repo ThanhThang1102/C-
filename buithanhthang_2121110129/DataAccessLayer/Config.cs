@@ -27,7 +27,6 @@ namespace buithanhthang_2121110129.DataAccessLayer
             connectionString["Server"] = serverName;
             connectionString["Database"] = databaseName;
             return connectionString.ToString();
-            //return $"Data Source={serverName};Initial Catalog={databaseName};User ID={username};Password={password}";
         }
     }
 }

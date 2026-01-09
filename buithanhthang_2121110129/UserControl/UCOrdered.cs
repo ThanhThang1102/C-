@@ -176,7 +176,54 @@ namespace buithanhthang_2121110129.UserControl
 
         private void btnChooseProduct_Click(object sender, EventArgs e)
         {
+            // Kiểm tra có dòng nào được chọn không
+            if (dgvProduct.CurrentRow == null || dgvProduct.CurrentRow.Index < 0)
+            {
+                MessageBox.Show("Vui lòng chọn một sản phẩm từ danh sách bên trái!",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
+            if (dgvProduct.CurrentRow.Index == dgvProduct.RowCount - 1) // Dòng mới trống
+                return;
+
+            // Tạo hóa đơn nếu chưa có
+            if (_order == null)
+            {
+                _order = settingInformation();
+                _orderedDetails = new List<Ordered_Item>();
+            }
+
+            // Lấy thông tin sản phẩm từ dòng được chọn
+            string product_id = dgvProduct.CurrentRow.Cells[0].Value.ToString();
+            string name = dgvProduct.CurrentRow.Cells[1].Value.ToString();
+            float price = float.Parse(dgvProduct.CurrentRow.Cells[6].Value.ToString());
+            int store_quantity = int.Parse(dgvProduct.CurrentRow.Cells[4].Value.ToString());
+
+            // Tạo item mới
+            UCProductItem item = new UCProductItem(flowpnl_Item, txtTotalPrice, product_id, name, price);
+
+            if (store_quantity < 1)
+            {
+                MessageBox.Show("Sản phẩm đã hết hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra xem sản phẩm đã có trong giỏ chưa
+            int index = item.FindThisItemInContainer();
+            if (index != -1)
+            {
+                UCProductItem existingItem = (UCProductItem)flowpnl_Item.Controls[index];
+                if (existingItem.product_quantity >= store_quantity)
+                {
+                    MessageBox.Show("Không đủ số lượng trong kho để thêm nữa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
+            // Thiết lập và thêm vào giỏ
+            item.SettingMaxQuantity(store_quantity);
+            item.SettingItem();
         }
 
         private void btnCheckHistory_Click(object sender, EventArgs e)

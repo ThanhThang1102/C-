@@ -44,15 +44,12 @@ namespace buithanhthang_2121110129.BusinessLogicLayer
 
         public Supplier GetSupplier(string supplier_id)
         {
-            try
-            {
-                return dao.GetSupplier(supplier_id);
-            }
-            catch (Exception)
-            {
-                throw new Exception("Can not find this supplier");
-            }
+            Supplier supplier = dao.GetSupplier(supplier_id);
 
+            if (supplier == null)
+                return null;
+
+            return supplier;
         }
 
         public DataTable FindSupplierByAddress(string address)

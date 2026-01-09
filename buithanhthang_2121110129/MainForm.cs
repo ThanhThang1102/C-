@@ -135,14 +135,27 @@ namespace buithanhthang_2121110129
                     }
                 case SettingControl.LOGOUT:
                     {
-                        if (staff_using == null)
-                            return;
-
-                        if (MessageBox.Show("Bạn có muốn kết thúc phiên đăng nhập không?", "THÔNG BÁO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show("Bạn có chắc muốn đăng xuất không?", "Xác nhận",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             staff_using = null;
-                            UCHomePage.Instance.LoadStaffData(staff_using);
+                            UCHomePage.Instance.LoadStaffData(staff_using); // Xóa thông tin nhân viên trên Home
+
+                            // Đóng MainForm và mở lại FormLogin
+                            this.Hide(); // Ẩn MainForm trước
+                            new FormLogin().ShowDialog(); // Mở FormLogin (modal)
+
+                            // Nếu người dùng đăng nhập lại thành công → hiện MainForm
+                            if (staff_using != null)
+                            {
+                                UCHomePage.Instance.LoadStaffData(staff_using);
+                                this.Show();
+                            }
+                            else
+                            {
+                                // Nếu bấm thoát ở FormLogin → đóng hẳn ứng dụng
+                                Application.Exit();
+                            }
                         }
                         break;
                     }

@@ -129,47 +129,72 @@ namespace buithanhthang_2121110129
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            staff.Name = txtName.Text;
-            staff.Gender = cbGender.Text;
-            staff.DateOfBirth = dtPickDoB.Value;
-            staff.Address = txtAddress.Text;
-            staff.CitizenID = txtCitizenID.Text;
-            staff.Email = txtEmail.Text;
-            staff.Phone = txtPhone.Text;
-
-            staff.Images = picRepresent.Image;
-
-            if (isValid(staff))
+            if (string.IsNullOrEmpty(staff.ID) || bus_staff.GetStaff(staff.ID) == null)
             {
-                if (bus_staff.GetStaff(staff.ID) == null) // new Staff
+                staff.ID = bus_staff.GetNextStaffID();
+                staff.Name = txtName.Text.Trim();
+                staff.Gender = cbGender.Text;
+                staff.DateOfBirth = dtPickDoB.Value;
+                staff.Address = txtAddress.Text.Trim();
+                staff.CitizenID = txtCitizenID.Text.Trim();
+                staff.Email = txtEmail.Text.Trim();
+
+                // === CHUẨN HÓA SỐ ĐIỆN THOẠI ===
+                string rawPhone = txtPhone.Text;
+                // Loại bỏ tất cả dấu gạch ngang '-', dấu gạch dưới '_', khoảng trắng
+                string cleanPhone = rawPhone.Replace("-", "").Replace("_", "").Replace(" ", "").Trim();
+
+                // Kiểm tra xem có đúng 10 số không (hoặc 11 nếu bắt đầu bằng 84)
+                if (cleanPhone.Length == 10 && System.Text.RegularExpressions.Regex.IsMatch(cleanPhone, @"^\d{10}$"))
                 {
-                    if (bus_staff.Create(staff))
+                    staff.Phone = cleanPhone; // Lưu dạng sạch: 0123456789
+                }
+                else if (cleanPhone.Length == 11 && cleanPhone.StartsWith("84"))
+                {
+                    // Nếu là dạng quốc tế 84..., chuyển về 0...
+                    staff.Phone = "0" + cleanPhone.Substring(2);
+                }
+                else
+                {
+                    // Nếu không hợp lệ → vẫn gán tạm để validate bên dưới báo lỗi
+                    staff.Phone = cleanPhone;
+                }
+
+                staff.Images = picRepresent.Image;
+
+                // Cập nhật hàm isValid để kiểm tra độ dài phone chính xác
+                if (isValid(staff))
+                {
+                    if (bus_staff.GetStaff(staff.ID) == null) // new Staff
                     {
-                        MessageBox.Show("Bổ sung nhân viên thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
-                        Close();
+                        if (bus_staff.Create(staff))
+                        {
+                            MessageBox.Show("Bổ sung nhân viên thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không thể thêm thông tin!", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Không thể thêm thông tin!", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (bus_staff.Update(staff))
+                        {
+                            MessageBox.Show("Cập nhật thông tin nhân viên thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không thể điều chỉnh thông tin!", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 else
                 {
-                    if (bus_staff.Update(staff))
-                    {
-                        MessageBox.Show("Cập nhật thông tin nhân viên thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
-                        Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không thể điều chỉnh thông tin!", "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Thông tin chưa hợp lệ!\n- Số điện thoại phải đủ 10 số\n- Email không đúng định dạng\n- Các trường bắt buộc không được để trống",
+                        "LỖI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Thông tin chưa hợp lệ!\nVui lòng điều chỉnh lại!", "LỖI",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -76,32 +76,45 @@ namespace buithanhthang_2121110129.UserControl
             dgvContracts.DataSource = null;
         }
 
-        private Dictionary<Spells, string> spellsText =
-           new Dictionary<Spells, string>()
-        {
-            { Spells.morning, "Ca sáng" },
-            { Spells.afternoon, "Ca chiều" },
-            { Spells.night, "Ca tối" }
-        };
-        private Dictionary<StatusOfContract, string> contractStatusText =
-            new Dictionary<StatusOfContract, string>()
-        {
-            { StatusOfContract.Unexpired, "Còn hạn" },
-            { StatusOfContract.Expiration_Soon, "Sắp hết hạn" },
-            { StatusOfContract.Expired, "Đã hết hạn" }
-        };
-
 
         private void LoadContentCombobox()
         {
-            cbTypeWork.DataSource = System.Enum.GetValues(typeof(TypeWork));
-            cbSpells.DataSource = new BindingSource(spellsText, null);
+            // 1. Dạng công việc: parttime / fulltime → tiếng Việt
+            var typeWorkDict = new Dictionary<TypeWork, string>
+    {
+        { TypeWork.fulltime, "Toàn thời gian" },
+        { TypeWork.parttime, "Bán thời gian" }
+    };
+            cbTypeWork.DataSource = new BindingSource(typeWorkDict, null);
+            cbTypeWork.DisplayMember = "Value";
+            cbTypeWork.ValueMember = "Key";
+
+            // 2. Buổi làm việc (chỉ dùng cho parttime)
+            var spellsDict = new Dictionary<Spells, string>
+    {
+        { Spells.morning, "Ca sáng" },
+        { Spells.afternoon, "Ca chiều" },
+        { Spells.night, "Ca tối" }
+    };
+            cbSpells.DataSource = new BindingSource(spellsDict, null);
             cbSpells.DisplayMember = "Value";
             cbSpells.ValueMember = "Key";
-            cbDateContract.DataSource = new BindingSource(contractStatusText, null);
+
+            // 3. Trạng thái hợp đồng
+            var contractStatusDict = new Dictionary<StatusOfContract, string>
+    {
+        { StatusOfContract.Unexpired, "Còn hạn" },
+        { StatusOfContract.Expiration_Soon, "Sắp hết hạn" },
+        { StatusOfContract.Expired, "Đã hết hạn" }
+    };
+            cbDateContract.DataSource = new BindingSource(contractStatusDict, null);
             cbDateContract.DisplayMember = "Value";
             cbDateContract.ValueMember = "Key";
 
+            // 4. Giới tính (riêng vì không dùng enum Gender mà dùng GenderVietnamese)
+            cbGenderFilter.Items.Clear();
+            cbGenderFilter.Items.AddRange(new string[] { "nam", "nữ", "khác" });
+            cbGenderFilter.SelectedIndex = 0; // mặc định
         }
 
         private DataTable getTableFilter(DataTable table, DataTable table_filter)
@@ -231,17 +244,20 @@ namespace buithanhthang_2121110129.UserControl
             }
             if (chbDateContract.Checked)
             {
-                table_filter = bus_staff.FindStaffByContractStatus(cbDateContract.Text);
+                StatusOfContract selectedStatus = (StatusOfContract)cbDateContract.SelectedValue;
+                table_filter = bus_staff.FindStaffByContractStatus(selectedStatus.ToString());
                 table = getTableFilter(table, table_filter);
             }
             if (chbTypeWork.Checked)
             {
-                table_filter = bus_staff.FindStaffByTypeWork(cbTypeWork.Text);
+                TypeWork selectedType = (TypeWork)cbTypeWork.SelectedValue;
+                table_filter = bus_staff.FindStaffByTypeWork(selectedType.ToString());
                 table = getTableFilter(table, table_filter);
             }
             if (chbSpells.Checked)
             {
-                table_filter = bus_staff.FindStaffBySpells(cbSpells.Text);
+                Spells selectedSpell = (Spells)cbSpells.SelectedValue;
+                table_filter = bus_staff.FindStaffBySpells(selectedSpell.ToString());
                 table = getTableFilter(table, table_filter);
             }
 
@@ -268,7 +284,26 @@ namespace buithanhthang_2121110129.UserControl
 
         private void btnMakeContract_Click(object sender, EventArgs e)
         {
+            // Kiểm tra đã chọn nhân viên chưa
+            if (_staff == null || string.IsNullOrEmpty(_staff.ID) || string.IsNullOrEmpty(_staff.Name))
+            {
+                MessageBox.Show("Vui lòng chọn một nhân viên từ danh sách trước khi tạo hợp đồng!",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            // Mở form tạo hợp đồng mới, truyền vào nhân viên hiện tại
+            FormContract formContract = new FormContract(_staff);
+            if (formContract.ShowDialog() == DialogResult.OK)
+            {
+                // Sau khi tạo hợp đồng thành công, reload lại danh sách hợp đồng của nhân viên (nếu đang hiển thị)
+                if (!string.IsNullOrEmpty(txtUsername.Text)) // đang xem chi tiết nhân viên
+                {
+                    dgvContracts.DataSource = bus_contract.GetAllContractOfStaff(_staff.ID);
+                }
+
+                MessageBox.Show("Tạo hợp đồng mới thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

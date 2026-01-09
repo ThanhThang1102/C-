@@ -54,7 +54,12 @@ namespace buithanhthang_2121110129.DataAccessLayer
 
         public Supplier GetSupplier(string id)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery($"select * from Supplier where Id={id}", CommandType.Text);
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "select * from Supplier where Id = @Id",
+                CommandType.Text,
+                new SqlParameter("@Id", SqlDbType.VarChar) { Value = id }
+            );
+
             if (data.Rows.Count == 0)
                 return null;
 

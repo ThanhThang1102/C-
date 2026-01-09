@@ -28,183 +28,197 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlMove = new System.Windows.Forms.Panel();
-            this.lblTabShow = new System.Windows.Forms.Label();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.pnlMain = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.dtPickDateJoin = new System.Windows.Forms.DateTimePicker();
-            this.txtPhone = new System.Windows.Forms.MaskedTextBox();
-            this.txtCustomerValue = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.lblCustomerPhone = new System.Windows.Forms.Label();
-            this.lblCustomerValue = new System.Windows.Forms.Label();
-            this.lblCustomerDateJoin = new System.Windows.Forms.Label();
-            this.lblCustomerName = new System.Windows.Forms.Label();
-            this.pnlMove.SuspendLayout();
-            this.pnlMain.SuspendLayout();
-            this.SuspendLayout();
+            pnlMove = new Panel();
+            lblTabShow = new Label();
+            btnMinimize = new Button();
+            pnlMain = new Panel();
+            btnCancel = new Button();
+            btnSave = new Button();
+            dtPickDateJoin = new DateTimePicker();
+            txtPhone = new MaskedTextBox();
+            txtCustomerValue = new TextBox();
+            txtName = new TextBox();
+            lblCustomerPhone = new Label();
+            lblCustomerValue = new Label();
+            lblCustomerDateJoin = new Label();
+            lblCustomerName = new Label();
+            pnlMove.SuspendLayout();
+            pnlMain.SuspendLayout();
+            SuspendLayout();
             // 
             // pnlMove
             // 
-            this.pnlMove.BackColor = System.Drawing.Color.OrangeRed;
-            this.pnlMove.Controls.Add(this.lblTabShow);
-            this.pnlMove.Controls.Add(this.btnMinimize);
-            this.pnlMove.Location = new System.Drawing.Point(0, 0);
-            this.pnlMove.Name = "pnlMove";
-            this.pnlMove.Size = new System.Drawing.Size(500, 40);
-            this.pnlMove.TabIndex = 3;
-            this.pnlMove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMove_MouseDown);
-            this.pnlMove.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlMove_MouseMove);
-            this.pnlMove.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlMove_MouseUp);
+            pnlMove.BackColor = Color.OrangeRed;
+            pnlMove.Controls.Add(lblTabShow);
+            pnlMove.Controls.Add(btnMinimize);
+            pnlMove.Location = new Point(0, 0);
+            pnlMove.Margin = new Padding(4, 3, 4, 3);
+            pnlMove.Name = "pnlMove";
+            pnlMove.Size = new Size(583, 46);
+            pnlMove.TabIndex = 3;
+            pnlMove.MouseDown += pnlMove_MouseDown;
+            pnlMove.MouseMove += pnlMove_MouseMove;
+            pnlMove.MouseUp += pnlMove_MouseUp;
             // 
             // lblTabShow
             // 
-            this.lblTabShow.AutoSize = true;
-            this.lblTabShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTabShow.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTabShow.Location = new System.Drawing.Point(12, 7);
-            this.lblTabShow.Name = "lblTabShow";
-            this.lblTabShow.Size = new System.Drawing.Size(214, 24);
-            this.lblTabShow.TabIndex = 4;
-            this.lblTabShow.Text = "Thông tin khách hàng";
+            lblTabShow.AutoSize = true;
+            lblTabShow.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTabShow.ForeColor = SystemColors.ButtonHighlight;
+            lblTabShow.Location = new Point(14, 8);
+            lblTabShow.Margin = new Padding(4, 0, 4, 0);
+            lblTabShow.Name = "lblTabShow";
+            lblTabShow.Size = new Size(214, 24);
+            lblTabShow.TabIndex = 4;
+            lblTabShow.Text = "Thông tin khách hàng";
             // 
             // btnMinimize
             // 
-            this.btnMinimize.Image = global::buithanhthang_2121110129.Properties.Resources.subtract_26px;
-            this.btnMinimize.Location = new System.Drawing.Point(430, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(58, 40);
-            this.btnMinimize.TabIndex = 3;
-            this.btnMinimize.UseVisualStyleBackColor = true;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            btnMinimize.Image = Properties.Resources.subtract_26px;
+            btnMinimize.Location = new Point(502, 0);
+            btnMinimize.Margin = new Padding(4, 3, 4, 3);
+            btnMinimize.Name = "btnMinimize";
+            btnMinimize.Size = new Size(68, 46);
+            btnMinimize.TabIndex = 3;
+            btnMinimize.UseVisualStyleBackColor = true;
+            btnMinimize.Click += btnMinimize_Click;
             // 
             // pnlMain
             // 
-            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pnlMain.Controls.Add(this.btnCancel);
-            this.pnlMain.Controls.Add(this.btnSave);
-            this.pnlMain.Controls.Add(this.dtPickDateJoin);
-            this.pnlMain.Controls.Add(this.txtPhone);
-            this.pnlMain.Controls.Add(this.txtCustomerValue);
-            this.pnlMain.Controls.Add(this.txtName);
-            this.pnlMain.Controls.Add(this.lblCustomerPhone);
-            this.pnlMain.Controls.Add(this.lblCustomerValue);
-            this.pnlMain.Controls.Add(this.lblCustomerDateJoin);
-            this.pnlMain.Controls.Add(this.lblCustomerName);
-            this.pnlMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlMain.Location = new System.Drawing.Point(0, 40);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(500, 240);
-            this.pnlMain.TabIndex = 4;
+            pnlMain.BackColor = Color.FromArgb(255, 255, 192);
+            pnlMain.Controls.Add(btnCancel);
+            pnlMain.Controls.Add(btnSave);
+            pnlMain.Controls.Add(dtPickDateJoin);
+            pnlMain.Controls.Add(txtPhone);
+            pnlMain.Controls.Add(txtCustomerValue);
+            pnlMain.Controls.Add(txtName);
+            pnlMain.Controls.Add(lblCustomerPhone);
+            pnlMain.Controls.Add(lblCustomerValue);
+            pnlMain.Controls.Add(lblCustomerDateJoin);
+            pnlMain.Controls.Add(lblCustomerName);
+            pnlMain.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            pnlMain.Location = new Point(0, 46);
+            pnlMain.Margin = new Padding(4, 3, 4, 3);
+            pnlMain.Name = "pnlMain";
+            pnlMain.Size = new Size(583, 277);
+            pnlMain.TabIndex = 4;
             // 
             // btnCancel
             // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(342, 196);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(146, 33);
-            this.btnCancel.TabIndex = 54;
-            this.btnCancel.Text = "Hủy";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.DialogResult = DialogResult.Cancel;
+            btnCancel.Location = new Point(399, 226);
+            btnCancel.Margin = new Padding(4, 3, 4, 3);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(170, 38);
+            btnCancel.TabIndex = 54;
+            btnCancel.Text = "Hủy";
+            btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(150, 196);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(186, 33);
-            this.btnSave.TabIndex = 53;
-            this.btnSave.Text = "Lưu thông tin";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            btnSave.Location = new Point(175, 226);
+            btnSave.Margin = new Padding(4, 3, 4, 3);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(217, 38);
+            btnSave.TabIndex = 53;
+            btnSave.Text = "Lưu thông tin";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // dtPickDateJoin
             // 
-            this.dtPickDateJoin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtPickDateJoin.Location = new System.Drawing.Point(150, 59);
-            this.dtPickDateJoin.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.dtPickDateJoin.MinDate = new System.DateTime(1980, 1, 1, 0, 0, 0, 0);
-            this.dtPickDateJoin.Name = "dtPickDateJoin";
-            this.dtPickDateJoin.Size = new System.Drawing.Size(186, 26);
-            this.dtPickDateJoin.TabIndex = 52;
-            this.dtPickDateJoin.Value = new System.DateTime(2022, 8, 2, 0, 0, 0, 0);
+            dtPickDateJoin.Format = DateTimePickerFormat.Short;
+            dtPickDateJoin.Location = new Point(175, 68);
+            dtPickDateJoin.Margin = new Padding(4, 3, 4, 3);
+            dtPickDateJoin.MaxDate = new DateTime(2100, 12, 31, 0, 0, 0, 0);
+            dtPickDateJoin.MinDate = new DateTime(1980, 1, 1, 0, 0, 0, 0);
+            dtPickDateJoin.Name = "dtPickDateJoin";
+            dtPickDateJoin.Size = new Size(216, 26);
+            dtPickDateJoin.TabIndex = 52;
+            dtPickDateJoin.Value = new DateTime(2026, 1, 9, 0, 0, 0, 0);
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(150, 103);
-            this.txtPhone.Mask = "0000-000-000";
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(187, 26);
-            this.txtPhone.TabIndex = 51;
+            txtPhone.Location = new Point(175, 119);
+            txtPhone.Margin = new Padding(4, 3, 4, 3);
+            txtPhone.Mask = "0000-000-000";
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(218, 26);
+            txtPhone.TabIndex = 51;
             // 
             // txtCustomerValue
             // 
-            this.txtCustomerValue.Location = new System.Drawing.Point(150, 147);
-            this.txtCustomerValue.Name = "txtCustomerValue";
-            this.txtCustomerValue.ReadOnly = true;
-            this.txtCustomerValue.Size = new System.Drawing.Size(338, 26);
-            this.txtCustomerValue.TabIndex = 50;
+            txtCustomerValue.Location = new Point(175, 170);
+            txtCustomerValue.Margin = new Padding(4, 3, 4, 3);
+            txtCustomerValue.Name = "txtCustomerValue";
+            txtCustomerValue.ReadOnly = true;
+            txtCustomerValue.Size = new Size(394, 26);
+            txtCustomerValue.TabIndex = 50;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(150, 15);
-            this.txtName.Name = "txtName";
-            this.txtName.ReadOnly = false;
-            this.txtName.Size = new System.Drawing.Size(338, 26);
-            this.txtName.TabIndex = 49;
+            txtName.Location = new Point(175, 17);
+            txtName.Margin = new Padding(4, 3, 4, 3);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(394, 26);
+            txtName.TabIndex = 49;
             // 
             // lblCustomerPhone
             // 
-            this.lblCustomerPhone.AutoSize = true;
-            this.lblCustomerPhone.Location = new System.Drawing.Point(21, 107);
-            this.lblCustomerPhone.Name = "lblCustomerPhone";
-            this.lblCustomerPhone.Size = new System.Drawing.Size(81, 20);
-            this.lblCustomerPhone.TabIndex = 48;
-            this.lblCustomerPhone.Text = "Điện thoại";
+            lblCustomerPhone.AutoSize = true;
+            lblCustomerPhone.Location = new Point(24, 123);
+            lblCustomerPhone.Margin = new Padding(4, 0, 4, 0);
+            lblCustomerPhone.Name = "lblCustomerPhone";
+            lblCustomerPhone.Size = new Size(81, 20);
+            lblCustomerPhone.TabIndex = 48;
+            lblCustomerPhone.Text = "Điện thoại";
             // 
             // lblCustomerValue
             // 
-            this.lblCustomerValue.AutoSize = true;
-            this.lblCustomerValue.Location = new System.Drawing.Point(21, 150);
-            this.lblCustomerValue.Name = "lblCustomerValue";
-            this.lblCustomerValue.Size = new System.Drawing.Size(103, 20);
-            this.lblCustomerValue.TabIndex = 47;
-            this.lblCustomerValue.Text = "Giá trị tích lũy";
+            lblCustomerValue.AutoSize = true;
+            lblCustomerValue.Location = new Point(24, 173);
+            lblCustomerValue.Margin = new Padding(4, 0, 4, 0);
+            lblCustomerValue.Name = "lblCustomerValue";
+            lblCustomerValue.Size = new Size(103, 20);
+            lblCustomerValue.TabIndex = 47;
+            lblCustomerValue.Text = "Giá trị tích lũy";
             // 
             // lblCustomerDateJoin
             // 
-            this.lblCustomerDateJoin.AutoSize = true;
-            this.lblCustomerDateJoin.Location = new System.Drawing.Point(21, 64);
-            this.lblCustomerDateJoin.Name = "lblCustomerDateJoin";
-            this.lblCustomerDateJoin.Size = new System.Drawing.Size(110, 20);
-            this.lblCustomerDateJoin.TabIndex = 46;
-            this.lblCustomerDateJoin.Text = "Ngày tham gia";
+            lblCustomerDateJoin.AutoSize = true;
+            lblCustomerDateJoin.Location = new Point(24, 74);
+            lblCustomerDateJoin.Margin = new Padding(4, 0, 4, 0);
+            lblCustomerDateJoin.Name = "lblCustomerDateJoin";
+            lblCustomerDateJoin.Size = new Size(110, 20);
+            lblCustomerDateJoin.TabIndex = 46;
+            lblCustomerDateJoin.Text = "Ngày tham gia";
             // 
             // lblCustomerName
             // 
-            this.lblCustomerName.AutoSize = true;
-            this.lblCustomerName.Location = new System.Drawing.Point(21, 21);
-            this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(57, 20);
-            this.lblCustomerName.TabIndex = 45;
-            this.lblCustomerName.Text = "Họ tên";
+            lblCustomerName.AutoSize = true;
+            lblCustomerName.Location = new Point(24, 24);
+            lblCustomerName.Margin = new Padding(4, 0, 4, 0);
+            lblCustomerName.Name = "lblCustomerName";
+            lblCustomerName.Size = new Size(57, 20);
+            lblCustomerName.TabIndex = 45;
+            lblCustomerName.Text = "Họ tên";
             // 
             // FormCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 280);
-            this.Controls.Add(this.pnlMain);
-            this.Controls.Add(this.pnlMove);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormCustomer";
-            this.Text = "FormCustomer";
-            this.pnlMove.ResumeLayout(false);
-            this.pnlMove.PerformLayout();
-            this.pnlMain.ResumeLayout(false);
-            this.pnlMain.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(583, 323);
+            Controls.Add(pnlMain);
+            Controls.Add(pnlMove);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "FormCustomer";
+            Text = "FormCustomer";
+            pnlMove.ResumeLayout(false);
+            pnlMove.PerformLayout();
+            pnlMain.ResumeLayout(false);
+            pnlMain.PerformLayout();
+            ResumeLayout(false);
 
         }
 

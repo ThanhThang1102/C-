@@ -1,6 +1,6 @@
 ﻿namespace buithanhthang_2121110129
 {
-    partial class FormStaff
+    partial class FormContract
     {
         /// <summary>
         /// Required designer variable.
@@ -32,25 +32,6 @@
             lblTabShow = new Label();
             btnMinimize = new Button();
             btnClose = new Button();
-            dtPickDoB = new DateTimePicker();
-            cbGender = new ComboBox();
-            txtPhone = new MaskedTextBox();
-            txtCitizenID = new MaskedTextBox();
-            txtEmail = new TextBox();
-            txtAddress = new TextBox();
-            txtName = new TextBox();
-            label8 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            picRepresent = new PictureBox();
-            btnChooseImage = new Button();
-            openFileDialog = new OpenFileDialog();
-            txtID = new TextBox();
-            label1 = new Label();
             btnCancel = new Button();
             btnSave = new Button();
             label9 = new Label();
@@ -64,8 +45,9 @@
             label12 = new Label();
             label13 = new Label();
             gbContract = new GroupBox();
+            txtSalary = new TextBox();
+            label1 = new Label();
             pnlMove.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picRepresent).BeginInit();
             gbContract.SuspendLayout();
             SuspendLayout();
             // 
@@ -90,9 +72,9 @@
             lblTabShow.ForeColor = SystemColors.ButtonHighlight;
             lblTabShow.Location = new Point(12, 7);
             lblTabShow.Name = "lblTabShow";
-            lblTabShow.Size = new Size(197, 24);
+            lblTabShow.Size = new Size(199, 24);
             lblTabShow.TabIndex = 4;
-            lblTabShow.Text = "Thông tin nhân viên";
+            lblTabShow.Text = "Thông tin Hợp đồng";
             // 
             // btnMinimize
             // 
@@ -114,172 +96,10 @@
             btnClose.TabIndex = 2;
             btnClose.UseVisualStyleBackColor = true;
             // 
-            // dtPickDoB
-            // 
-            dtPickDoB.Format = DateTimePickerFormat.Short;
-            dtPickDoB.Location = new Point(349, 169);
-            dtPickDoB.MaxDate = new DateTime(2100, 12, 31, 0, 0, 0, 0);
-            dtPickDoB.MinDate = new DateTime(1980, 1, 1, 0, 0, 0, 0);
-            dtPickDoB.Name = "dtPickDoB";
-            dtPickDoB.Size = new Size(186, 29);
-            dtPickDoB.TabIndex = 44;
-            dtPickDoB.Value = new DateTime(2026, 1, 9, 0, 0, 0, 0);
-            // 
-            // cbGender
-            // 
-            cbGender.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbGender.FormattingEnabled = true;
-            cbGender.Location = new Point(349, 126);
-            cbGender.Name = "cbGender";
-            cbGender.Size = new Size(187, 32);
-            cbGender.TabIndex = 38;
-            // 
-            // txtPhone
-            // 
-            txtPhone.Location = new Point(349, 289);
-            txtPhone.Mask = "0000-000-000";
-            txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(187, 29);
-            txtPhone.TabIndex = 43;
-            // 
-            // txtCitizenID
-            // 
-            txtCitizenID.Location = new Point(349, 209);
-            txtCitizenID.Mask = "000000000000";
-            txtCitizenID.Name = "txtCitizenID";
-            txtCitizenID.Size = new Size(187, 29);
-            txtCitizenID.TabIndex = 42;
-            txtCitizenID.ValidatingType = typeof(int);
-            // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(349, 329);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(338, 29);
-            txtEmail.TabIndex = 41;
-            // 
-            // txtAddress
-            // 
-            txtAddress.Location = new Point(349, 249);
-            txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(338, 29);
-            txtAddress.TabIndex = 40;
-            // 
-            // txtName
-            // 
-            txtName.Location = new Point(349, 86);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(338, 29);
-            txtName.TabIndex = 39;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(204, 330);
-            label8.Name = "label8";
-            label8.Size = new Size(57, 24);
-            label8.TabIndex = 37;
-            label8.Text = "Email";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(203, 290);
-            label5.Name = "label5";
-            label5.Size = new Size(94, 24);
-            label5.TabIndex = 36;
-            label5.Text = "Điện thoại";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(203, 250);
-            label6.Name = "label6";
-            label6.Size = new Size(67, 24);
-            label6.TabIndex = 35;
-            label6.Text = "Địa chỉ";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(203, 210);
-            label7.Name = "label7";
-            label7.Size = new Size(62, 24);
-            label7.TabIndex = 34;
-            label7.Text = "CCCD";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(203, 170);
-            label4.Name = "label4";
-            label4.Size = new Size(94, 24);
-            label4.TabIndex = 33;
-            label4.Text = "Ngày sinh";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(203, 130);
-            label3.Name = "label3";
-            label3.Size = new Size(43, 24);
-            label3.TabIndex = 32;
-            label3.Text = "Giới";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(203, 90);
-            label2.Name = "label2";
-            label2.Size = new Size(66, 24);
-            label2.TabIndex = 31;
-            label2.Text = "Họ tên";
-            // 
-            // picRepresent
-            // 
-            picRepresent.BackColor = Color.Linen;
-            picRepresent.Location = new Point(13, 55);
-            picRepresent.Name = "picRepresent";
-            picRepresent.Size = new Size(168, 224);
-            picRepresent.SizeMode = PictureBoxSizeMode.StretchImage;
-            picRepresent.TabIndex = 30;
-            picRepresent.TabStop = false;
-            // 
-            // btnChooseImage
-            // 
-            btnChooseImage.Location = new Point(13, 290);
-            btnChooseImage.Name = "btnChooseImage";
-            btnChooseImage.Size = new Size(168, 45);
-            btnChooseImage.TabIndex = 45;
-            btnChooseImage.Text = "Chọn ảnh";
-            btnChooseImage.UseVisualStyleBackColor = true;
-            btnChooseImage.Click += btnChooseImage_Click;
-            // 
-            // openFileDialog
-            // 
-            openFileDialog.FileName = "openFileDialog1";
-            // 
-            // txtID
-            // 
-            txtID.Location = new Point(349, 47);
-            txtID.Name = "txtID";
-            txtID.ReadOnly = true;
-            txtID.Size = new Size(338, 29);
-            txtID.TabIndex = 47;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(203, 50);
-            label1.Name = "label1";
-            label1.Size = new Size(124, 24);
-            label1.TabIndex = 46;
-            label1.Text = "Mã nhân viên";
-            // 
             // btnCancel
             // 
             btnCancel.DialogResult = DialogResult.Cancel;
-            btnCancel.Location = new Point(504, 181);
+            btnCancel.Location = new Point(504, 220);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(168, 34);
             btnCancel.TabIndex = 49;
@@ -288,7 +108,7 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(504, 140);
+            btnSave.Location = new Point(504, 179);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(168, 34);
             btnSave.TabIndex = 50;
@@ -393,6 +213,8 @@
             // gbContract
             // 
             gbContract.BackColor = Color.PaleGreen;
+            gbContract.Controls.Add(txtSalary);
+            gbContract.Controls.Add(label1);
             gbContract.Controls.Add(btnCancel);
             gbContract.Controls.Add(btnSave);
             gbContract.Controls.Add(label13);
@@ -405,51 +227,47 @@
             gbContract.Controls.Add(label10);
             gbContract.Controls.Add(txtContractID);
             gbContract.Controls.Add(label9);
-            gbContract.Location = new Point(15, 367);
+            gbContract.Location = new Point(12, 56);
             gbContract.Name = "gbContract";
-            gbContract.Size = new Size(678, 224);
+            gbContract.Size = new Size(678, 281);
             gbContract.TabIndex = 48;
             gbContract.TabStop = false;
-            gbContract.Text = "Chi tiết hợp đồng hiện tại";
+            gbContract.Text = "Chi tiết hợp đồng";
             // 
-            // FormStaff
+            // txtSalary
+            // 
+            txtSalary.Location = new Point(173, 224);
+            txtSalary.Name = "txtSalary";
+            txtSalary.Size = new Size(258, 29);
+            txtSalary.TabIndex = 59;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(8, 227);
+            label1.Name = "label1";
+            label1.Size = new Size(100, 24);
+            label1.TabIndex = 58;
+            label1.Text = "Mức lương";
+            // 
+            // FormContract
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Moccasin;
-            ClientSize = new Size(705, 600);
+            ClientSize = new Size(705, 354);
             Controls.Add(gbContract);
-            Controls.Add(txtID);
-            Controls.Add(label1);
-            Controls.Add(btnChooseImage);
-            Controls.Add(dtPickDoB);
-            Controls.Add(cbGender);
-            Controls.Add(txtPhone);
-            Controls.Add(txtCitizenID);
-            Controls.Add(txtEmail);
-            Controls.Add(txtAddress);
-            Controls.Add(txtName);
-            Controls.Add(label8);
-            Controls.Add(label5);
-            Controls.Add(label6);
-            Controls.Add(label7);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(picRepresent);
             Controls.Add(pnlMove);
             Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(6);
-            Name = "FormStaff";
+            Name = "FormContract";
             Text = "FormStaff";
             pnlMove.ResumeLayout(false);
             pnlMove.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)picRepresent).EndInit();
             gbContract.ResumeLayout(false);
             gbContract.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
 
         }
 
@@ -458,25 +276,6 @@
         private System.Windows.Forms.Panel pnlMove;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.DateTimePicker dtPickDoB;
-        private System.Windows.Forms.ComboBox cbGender;
-        private System.Windows.Forms.MaskedTextBox txtPhone;
-        private System.Windows.Forms.MaskedTextBox txtCitizenID;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox picRepresent;
-        private System.Windows.Forms.Button btnChooseImage;
-        private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lblTabShow;
@@ -491,5 +290,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox gbContract;
+        private TextBox txtSalary;
+        private Label label1;
     }
 }

@@ -158,7 +158,7 @@
             dtPickDateCreate.Name = "dtPickDateCreate";
             dtPickDateCreate.Size = new Size(351, 22);
             dtPickDateCreate.TabIndex = 36;
-            dtPickDateCreate.Value = new DateTime(2022, 2, 4, 0, 0, 0, 0);
+            dtPickDateCreate.Value = new DateTime(2026, 1, 9, 0, 0, 0, 0);
             // 
             // txtStaffName
             // 

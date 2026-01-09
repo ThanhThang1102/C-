@@ -81,6 +81,7 @@ namespace buithanhthang_2121110129
 
                 MainForm.staff_using = bus_staff.GetStaff(staff_id);
                 UCHomePage.Instance.LoadStaffData(MainForm.staff_using);
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else

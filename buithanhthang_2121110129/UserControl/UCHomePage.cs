@@ -19,6 +19,7 @@ namespace buithanhthang_2121110129.UserControl
         private BUS_Customer bus_customer;
         private BUS_Imported bus_imported;
         private BUS_Ordered bus_ordered;
+        private BUS_ProductStatistic bus_productStat;
 
         private Dictionary<string, string> link;
 
@@ -43,9 +44,12 @@ namespace buithanhthang_2121110129.UserControl
             bus_customer = new BUS_Customer();
             bus_imported = new BUS_Imported();
             bus_ordered = new BUS_Ordered();
+            bus_productStat = new BUS_ProductStatistic();
 
             Task.Run(() => LoadStoreInformation());
             LoadCustomerData();
+            LoadProductChart();           // ← Gọi load biểu đồ
+            LoadNewImportedProducts();    // ← Gọi load danh sách sản phẩm mới nhập
         }
 
 
@@ -76,6 +80,8 @@ namespace buithanhthang_2121110129.UserControl
         private void btnReloadValue_Click(object sender, EventArgs e)
         {
             LoadIncomeData();
+            LoadProductChart();           // ← reload biểu đồ
+            LoadNewImportedProducts();    // ← reload listbox
         }
         #endregion
 
@@ -209,6 +215,89 @@ namespace buithanhthang_2121110129.UserControl
             }
         }
 
+        private void LoadProductChart()
+        {
+            // Lấy dữ liệu phần trăm sản phẩm bán ra theo tên trong 30 ngày gần nhất
+            DateTime toDate = DateTime.Today;
+            DateTime fromDate = toDate.AddDays(-29);
+
+            var saleData = bus_productStat.GetSalePercentByProductName(fromDate, toDate);
+
+            // Xóa dữ liệu cũ
+            chartProduct.Series["Series1"].Points.Clear();
+            chartProduct.Titles.Clear();
+            chartProduct.Titles.Add("Top sản phẩm bán chạy (30 ngày gần nhất)");
+
+            if (saleData.Count == 0)
+            {
+                chartProduct.Titles.Add("Chưa có dữ liệu bán hàng");
+                return;
+            }
+
+            // Chỉ lấy top 8 sản phẩm để biểu đồ đẹp
+            var topProducts = saleData.OrderByDescending(x => x.Value).Take(8).ToList();
+
+            foreach (var item in topProducts)
+            {
+                var point = chartProduct.Series["Series1"].Points.Add(item.Value);
+                point.AxisLabel = item.Key;
+                point.Label = $"{item.Value}%";
+                point.LegendText = item.Key;
+            }
+
+            // Tùy chỉnh đẹp hơn
+            chartProduct.Series["Series1"]["PieLabelStyle"] = "Outside";
+            chartProduct.Series["Series1"]["PieLineColor"] = "Black";
+            chartProduct.ChartAreas["ChartArea1"].Area3DStyle.Enable3D = true;
+        }
+
+        private void LoadNewImportedProducts()
+        {
+            // Lấy dữ liệu nhập hàng trong 7 ngày gần nhất
+            DateTime toDate = DateTime.Today.AddDays(1); // bao gồm hôm nay
+            DateTime fromDate = toDate.AddDays(-7);
+
+            // Giả sử bạn có DAO_Bill_Item với phương thức GetAllItemsInPeriod đã có (từ BUS_ProductStatistic)
+            // Ta sẽ lấy trực tiếp từ BUS_ProductStatistic hoặc tạo query đơn giản
+
+            // Cách đơn giản: lấy tất cả sản phẩm nhập trong 7 ngày gần nhất
+            DataTable importedItems = null;
+            try
+            {
+                // Nếu DAO_Bill_Item có phương thức GetAllItemsInPeriod
+                importedItems = new DAO_Bill_Item("Imported").GetAllItemsInPeriod(fromDate, toDate);
+            }
+            catch
+            {
+                listBoxProductNewImport.Items.Add("Không tải được dữ liệu nhập hàng");
+                return;
+            }
+
+            listBoxProductNewImport.Items.Clear();
+
+            if (importedItems.Rows.Count == 0)
+            {
+                listBoxProductNewImport.Items.Add("Không có sản phẩm mới nhập trong 7 ngày qua");
+                return;
+            }
+
+            listBoxProductNewImport.Items.Add("=== Sản phẩm mới nhập (7 ngày gần nhất) ===");
+
+            // Group theo tên sản phẩm để hiển thị đẹp
+            var grouped = importedItems.AsEnumerable()
+                .GroupBy(row => row["ProductName"].ToString())
+                .Select(g => new
+                {
+                    Name = g.Key,
+                    TotalQty = g.Sum(r => Convert.ToInt32(r["Quantity"]))
+                })
+                .OrderByDescending(x => x.TotalQty);
+
+            foreach (var item in grouped)
+            {
+                listBoxProductNewImport.Items.Add($"{item.Name} - Nhập {item.TotalQty} cái");
+            }
+        }
         private void dgvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvCustomer.CurrentCell.RowIndex == dgvCustomer.RowCount - 1)

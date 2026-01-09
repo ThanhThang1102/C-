@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             pnlMain = new Panel();
             gbMakeReport = new GroupBox();
             gbChooseReportInfor = new GroupBox();
@@ -363,6 +363,7 @@
             cbTypeChartProduct.Name = "cbTypeChartProduct";
             cbTypeChartProduct.Size = new Size(514, 32);
             cbTypeChartProduct.TabIndex = 0;
+            cbTypeChartProduct.SelectedIndexChanged += cbTypeChartProduct_SelectedIndexChanged;
             // 
             // gbCheckTimeProduct
             // 
@@ -387,6 +388,7 @@
             btnMakeChartProduct.TabIndex = 3;
             btnMakeChartProduct.Text = "Tạo biểu đồ";
             btnMakeChartProduct.UseVisualStyleBackColor = true;
+            btnMakeChartProduct.Click += btnMakeChartProduct_Click;
             // 
             // rad12monthsProduct
             // 
@@ -422,18 +424,18 @@
             // 
             // cbInformationPlus
             // 
-            chartArea3.Name = "ChartArea1";
-            cbInformationPlus.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            cbInformationPlus.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            cbInformationPlus.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            cbInformationPlus.Legends.Add(legend1);
             cbInformationPlus.Location = new Point(6, 229);
             cbInformationPlus.Name = "cbInformationPlus";
             cbInformationPlus.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            cbInformationPlus.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            cbInformationPlus.Series.Add(series1);
             cbInformationPlus.Size = new Size(526, 199);
             cbInformationPlus.TabIndex = 1;
             cbInformationPlus.Text = " ";
@@ -512,25 +514,25 @@
             // chartSales
             // 
             chartSales.BorderlineWidth = 4;
-            chartArea4.Name = "ChartArea1";
-            chartSales.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            chartSales.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            chartSales.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            chartSales.Legends.Add(legend2);
             chartSales.Location = new Point(6, 338);
             chartSales.Name = "chartSales";
             chartSales.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series5.BorderWidth = 4;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Legend = "Legend1";
-            series5.Name = "Thu nhập";
-            series6.BorderWidth = 4;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Legend = "Legend1";
-            series6.Name = "Chi tiêu";
-            chartSales.Series.Add(series5);
-            chartSales.Series.Add(series6);
+            series2.BorderWidth = 4;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Thu nhập";
+            series3.BorderWidth = 4;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Chi tiêu";
+            chartSales.Series.Add(series2);
+            chartSales.Series.Add(series3);
             chartSales.Size = new Size(788, 361);
             chartSales.TabIndex = 5;
             chartSales.Text = "Biểu đồ thu nhập";

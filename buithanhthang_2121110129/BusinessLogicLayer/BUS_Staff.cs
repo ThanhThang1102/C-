@@ -88,5 +88,23 @@ namespace buithanhthang_2121110129.BusinessLogicLayer
         {
             return dao.FindStaffByTypeWork(typeWork);
         }
+        public string GetNextStaffID()
+        {
+            string query = @"
+                SELECT MAX(CAST(ID AS INT))
+                FROM Staff
+                WHERE ISNUMERIC(ID) = 1 AND LEN(ID) <= 10"; // LEN <=10 để tránh ID dài kiểu timestamp
+
+            object result = DataProvider.Instance.ExecuteScalar(query, CommandType.Text, null);
+
+            int nextID = 1; // Nếu bảng rỗng hoặc không có ID số nào
+
+            if (result != null && result != DBNull.Value)
+            {
+                nextID = Convert.ToInt32(result) + 1;
+            }
+
+            return nextID.ToString();
+        }
     }
 }

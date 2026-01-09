@@ -173,7 +173,31 @@ namespace buithanhthang_2121110129.UserControl
 
         private void btnChooseProduct_Click(object sender, EventArgs e)
         {
+            if (dgvProduct.CurrentRow == null)
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm!", "THÔNG BÁO");
+                return;
+            }
 
+            if (_import == null)
+            {
+                _import = settingInformation();
+                _importedDetails = new List<Imported_Item>();
+            }
+
+            string product_id = dgvProduct.CurrentRow.Cells[0].Value.ToString();
+            string name = dgvProduct.CurrentRow.Cells[1].Value.ToString();
+            float price = float.Parse(dgvProduct.CurrentRow.Cells[6].Value.ToString());
+
+            UCProductItem item = new UCProductItem(
+                flowpnl_Item,
+                txtTotalPrice,
+                product_id,
+                name,
+                price
+            );
+
+            item.SettingItem();
         }
 
         private void btnCheckHistory_Click(object sender, EventArgs e)
