@@ -99,7 +99,7 @@
             pnlMain.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             pnlMain.Location = new Point(0, 0);
             pnlMain.Name = "pnlMain";
-            pnlMain.Size = new Size(1350, 768);
+            pnlMain.Size = new Size(1366, 733);
             pnlMain.TabIndex = 2;
             // 
             // gbDetail
@@ -124,7 +124,7 @@
             gbDetail.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             gbDetail.Location = new Point(706, 3);
             gbDetail.Name = "gbDetail";
-            gbDetail.Size = new Size(641, 719);
+            gbDetail.Size = new Size(657, 727);
             gbDetail.TabIndex = 3;
             gbDetail.TabStop = false;
             gbDetail.Text = "Thông tin sản phẩm và nhà cung cấp";
@@ -168,16 +168,16 @@
             gbSupplier.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             gbSupplier.Location = new Point(6, 336);
             gbSupplier.Name = "gbSupplier";
-            gbSupplier.Size = new Size(629, 377);
+            gbSupplier.Size = new Size(645, 385);
             gbSupplier.TabIndex = 37;
             gbSupplier.TabStop = false;
             gbSupplier.Text = "Thông tin về nhà cung cấp";
             // 
             // btnSeeMoreSupplier
             // 
-            btnSeeMoreSupplier.Location = new Point(324, 339);
+            btnSeeMoreSupplier.Location = new Point(324, 341);
             btnSeeMoreSupplier.Name = "btnSeeMoreSupplier";
-            btnSeeMoreSupplier.Size = new Size(299, 36);
+            btnSeeMoreSupplier.Size = new Size(309, 36);
             btnSeeMoreSupplier.TabIndex = 50;
             btnSeeMoreSupplier.Text = "Xem thêm nhà cung cấp khác";
             btnSeeMoreSupplier.UseVisualStyleBackColor = true;
@@ -185,9 +185,9 @@
             // 
             // btnEditSupplier
             // 
-            btnEditSupplier.Location = new Point(7, 339);
+            btnEditSupplier.Location = new Point(13, 341);
             btnEditSupplier.Name = "btnEditSupplier";
-            btnEditSupplier.Size = new Size(299, 36);
+            btnEditSupplier.Size = new Size(293, 36);
             btnEditSupplier.TabIndex = 39;
             btnEditSupplier.Text = "Điều chỉnh thông tin";
             btnEditSupplier.UseVisualStyleBackColor = true;
@@ -198,7 +198,7 @@
             gbProductOfSupplier.Controls.Add(dgvProductOfSupplier);
             gbProductOfSupplier.Location = new Point(7, 189);
             gbProductOfSupplier.Name = "gbProductOfSupplier";
-            gbProductOfSupplier.Size = new Size(616, 146);
+            gbProductOfSupplier.Size = new Size(632, 146);
             gbProductOfSupplier.TabIndex = 49;
             gbProductOfSupplier.TabStop = false;
             gbProductOfSupplier.Text = "Các sản phẩm đang cung cấp";
@@ -219,7 +219,7 @@
             dgvProductOfSupplier.Location = new Point(6, 26);
             dgvProductOfSupplier.Name = "dgvProductOfSupplier";
             dgvProductOfSupplier.ReadOnly = true;
-            dgvProductOfSupplier.Size = new Size(604, 114);
+            dgvProductOfSupplier.Size = new Size(620, 114);
             dgvProductOfSupplier.TabIndex = 0;
             dgvProductOfSupplier.CellClick += dgvProductOfSupplier_CellClick;
             // 
@@ -450,7 +450,7 @@
             gbFilter.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             gbFilter.Location = new Point(3, 3);
             gbFilter.Name = "gbFilter";
-            gbFilter.Size = new Size(697, 719);
+            gbFilter.Size = new Size(697, 727);
             gbFilter.TabIndex = 2;
             gbFilter.TabStop = false;
             gbFilter.Text = "Lọc thông tin";
@@ -471,13 +471,13 @@
             dgvProduct.Location = new Point(15, 177);
             dgvProduct.Name = "dgvProduct";
             dgvProduct.ReadOnly = true;
-            dgvProduct.Size = new Size(661, 494);
+            dgvProduct.Size = new Size(661, 500);
             dgvProduct.TabIndex = 31;
             dgvProduct.CellClick += dgvProduct_CellClick;
             // 
             // btnAddNew
             // 
-            btnAddNew.Location = new Point(15, 677);
+            btnAddNew.Location = new Point(15, 683);
             btnAddNew.Name = "btnAddNew";
             btnAddNew.Size = new Size(183, 36);
             btnAddNew.TabIndex = 30;
@@ -497,7 +497,7 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(493, 677);
+            btnDelete.Location = new Point(493, 683);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(183, 36);
             btnDelete.TabIndex = 28;
@@ -637,7 +637,7 @@
             Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(6);
             Name = "UCProduct";
-            Size = new Size(1350, 768);
+            Size = new Size(1366, 733);
             pnlMain.ResumeLayout(false);
             gbDetail.ResumeLayout(false);
             gbDetail.PerformLayout();

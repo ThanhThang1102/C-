@@ -33,13 +33,15 @@
             cbDateContract = new ComboBox();
             pnlMain = new Panel();
             gbDetail = new GroupBox();
+            btnDeleteContract = new Button();
+            btnEditContract = new Button();
             txtGender = new TextBox();
-            btnLoadStaffInfor = new Button();
-            btnEditStaffInfor = new Button();
             btnMakeContract = new Button();
             gbContractsAndAccount = new GroupBox();
             dgvContracts = new DataGridView();
+            btnLoadStaffInfor = new Button();
             label11 = new Label();
+            btnEditStaffInfor = new Button();
             btnShowPassword = new Button();
             btnChangePassword = new Button();
             label10 = new Label();
@@ -111,15 +113,15 @@
             pnlMain.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             pnlMain.Location = new Point(0, 0);
             pnlMain.Name = "pnlMain";
-            pnlMain.Size = new Size(1350, 768);
+            pnlMain.Size = new Size(1366, 733);
             pnlMain.TabIndex = 1;
             // 
             // gbDetail
             // 
             gbDetail.BackColor = Color.LightSalmon;
+            gbDetail.Controls.Add(btnDeleteContract);
+            gbDetail.Controls.Add(btnEditContract);
             gbDetail.Controls.Add(txtGender);
-            gbDetail.Controls.Add(btnLoadStaffInfor);
-            gbDetail.Controls.Add(btnEditStaffInfor);
             gbDetail.Controls.Add(btnMakeContract);
             gbDetail.Controls.Add(gbContractsAndAccount);
             gbDetail.Controls.Add(dtPickDoB);
@@ -139,10 +141,30 @@
             gbDetail.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             gbDetail.Location = new Point(706, 3);
             gbDetail.Name = "gbDetail";
-            gbDetail.Size = new Size(641, 711);
+            gbDetail.Size = new Size(657, 727);
             gbDetail.TabIndex = 1;
             gbDetail.TabStop = false;
             gbDetail.Text = "Thông tin nhân viên và hợp đồng";
+            // 
+            // btnDeleteContract
+            // 
+            btnDeleteContract.Location = new Point(12, 685);
+            btnDeleteContract.Name = "btnDeleteContract";
+            btnDeleteContract.Size = new Size(170, 36);
+            btnDeleteContract.TabIndex = 35;
+            btnDeleteContract.Text = "Xóa hợp đồng";
+            btnDeleteContract.UseVisualStyleBackColor = true;
+            btnDeleteContract.Click += btnDeleteContract_Click;
+            // 
+            // btnEditContract
+            // 
+            btnEditContract.Location = new Point(241, 685);
+            btnEditContract.Name = "btnEditContract";
+            btnEditContract.Size = new Size(170, 36);
+            btnEditContract.TabIndex = 34;
+            btnEditContract.Text = "Sửa hợp đồng";
+            btnEditContract.UseVisualStyleBackColor = true;
+            btnEditContract.Click += btnEditContract_Click;
             // 
             // txtGender
             // 
@@ -152,29 +174,9 @@
             txtGender.Size = new Size(187, 22);
             txtGender.TabIndex = 33;
             // 
-            // btnLoadStaffInfor
-            // 
-            btnLoadStaffInfor.Location = new Point(293, 664);
-            btnLoadStaffInfor.Name = "btnLoadStaffInfor";
-            btnLoadStaffInfor.Size = new Size(162, 36);
-            btnLoadStaffInfor.TabIndex = 32;
-            btnLoadStaffInfor.Text = "Tải thông tin";
-            btnLoadStaffInfor.UseVisualStyleBackColor = true;
-            btnLoadStaffInfor.Click += btnLoadStaffInfor_Click;
-            // 
-            // btnEditStaffInfor
-            // 
-            btnEditStaffInfor.Location = new Point(12, 664);
-            btnEditStaffInfor.Name = "btnEditStaffInfor";
-            btnEditStaffInfor.Size = new Size(231, 36);
-            btnEditStaffInfor.TabIndex = 31;
-            btnEditStaffInfor.Text = "Sửa thông tin nhân viên";
-            btnEditStaffInfor.UseVisualStyleBackColor = true;
-            btnEditStaffInfor.Click += btnEditStaffInfor_Click;
-            // 
             // btnMakeContract
             // 
-            btnMakeContract.Location = new Point(461, 664);
+            btnMakeContract.Location = new Point(475, 685);
             btnMakeContract.Name = "btnMakeContract";
             btnMakeContract.Size = new Size(170, 36);
             btnMakeContract.TabIndex = 24;
@@ -186,7 +188,9 @@
             // 
             gbContractsAndAccount.BackColor = Color.Salmon;
             gbContractsAndAccount.Controls.Add(dgvContracts);
+            gbContractsAndAccount.Controls.Add(btnLoadStaffInfor);
             gbContractsAndAccount.Controls.Add(label11);
+            gbContractsAndAccount.Controls.Add(btnEditStaffInfor);
             gbContractsAndAccount.Controls.Add(btnShowPassword);
             gbContractsAndAccount.Controls.Add(btnChangePassword);
             gbContractsAndAccount.Controls.Add(label10);
@@ -195,7 +199,7 @@
             gbContractsAndAccount.Controls.Add(txtUsername);
             gbContractsAndAccount.Location = new Point(6, 253);
             gbContractsAndAccount.Name = "gbContractsAndAccount";
-            gbContractsAndAccount.Size = new Size(629, 405);
+            gbContractsAndAccount.Size = new Size(645, 426);
             gbContractsAndAccount.TabIndex = 30;
             gbContractsAndAccount.TabStop = false;
             gbContractsAndAccount.Text = "Thông tin hợp đồng và tài khoản";
@@ -206,8 +210,18 @@
             dgvContracts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvContracts.Location = new Point(6, 152);
             dgvContracts.Name = "dgvContracts";
-            dgvContracts.Size = new Size(617, 247);
+            dgvContracts.Size = new Size(633, 268);
             dgvContracts.TabIndex = 37;
+            // 
+            // btnLoadStaffInfor
+            // 
+            btnLoadStaffInfor.Location = new Point(184, 85);
+            btnLoadStaffInfor.Name = "btnLoadStaffInfor";
+            btnLoadStaffInfor.Size = new Size(114, 33);
+            btnLoadStaffInfor.TabIndex = 32;
+            btnLoadStaffInfor.Text = "Tải thông tin";
+            btnLoadStaffInfor.UseVisualStyleBackColor = true;
+            btnLoadStaffInfor.Click += btnLoadStaffInfor_Click;
             // 
             // label11
             // 
@@ -219,11 +233,21 @@
             label11.TabIndex = 36;
             label11.Text = "Danh sách hợp đồng với cửa hàng";
             // 
+            // btnEditStaffInfor
+            // 
+            btnEditStaffInfor.Location = new Point(6, 85);
+            btnEditStaffInfor.Name = "btnEditStaffInfor";
+            btnEditStaffInfor.Size = new Size(172, 33);
+            btnEditStaffInfor.TabIndex = 31;
+            btnEditStaffInfor.Text = "Sửa thông tin nhân viên";
+            btnEditStaffInfor.UseVisualStyleBackColor = true;
+            btnEditStaffInfor.Click += btnEditStaffInfor_Click;
+            // 
             // btnShowPassword
             // 
-            btnShowPassword.Location = new Point(289, 85);
+            btnShowPassword.Location = new Point(304, 85);
             btnShowPassword.Name = "btnShowPassword";
-            btnShowPassword.Size = new Size(164, 33);
+            btnShowPassword.Size = new Size(151, 33);
             btnShowPassword.TabIndex = 35;
             btnShowPassword.Text = "Hiện mật khẩu";
             btnShowPassword.UseVisualStyleBackColor = true;
@@ -430,7 +454,7 @@
             gbFilter.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             gbFilter.Location = new Point(3, 3);
             gbFilter.Name = "gbFilter";
-            gbFilter.Size = new Size(697, 711);
+            gbFilter.Size = new Size(697, 727);
             gbFilter.TabIndex = 0;
             gbFilter.TabStop = false;
             gbFilter.Text = "Lọc thông tin";
@@ -441,13 +465,13 @@
             dgvStaff.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvStaff.Location = new Point(19, 275);
             dgvStaff.Name = "dgvStaff";
-            dgvStaff.Size = new Size(661, 383);
+            dgvStaff.Size = new Size(661, 404);
             dgvStaff.TabIndex = 23;
             dgvStaff.CellClick += dgvStaff_CellClick;
             // 
             // btnAddNew
             // 
-            btnAddNew.Location = new Point(19, 664);
+            btnAddNew.Location = new Point(19, 685);
             btnAddNew.Name = "btnAddNew";
             btnAddNew.Size = new Size(183, 36);
             btnAddNew.TabIndex = 21;
@@ -467,7 +491,7 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(497, 664);
+            btnDelete.Location = new Point(497, 685);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(183, 36);
             btnDelete.TabIndex = 19;
@@ -666,7 +690,7 @@
             Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(6);
             Name = "UCStaff";
-            Size = new Size(1350, 768);
+            Size = new Size(1366, 733);
             pnlMain.ResumeLayout(false);
             gbDetail.ResumeLayout(false);
             gbDetail.PerformLayout();
@@ -737,5 +761,7 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Button btnLoadStaffInfor;
         private System.Windows.Forms.TextBox txtGender;
+        private Button btnEditContract;
+        private Button btnDeleteContract;
     }
 }

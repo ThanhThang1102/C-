@@ -19,25 +19,66 @@ namespace buithanhthang_2121110129
         private Staff staff = null;
         private Contract newContract;
 
-        public FormContract(Staff staff)
+        private Contract currentContract; // hợp đồng đang xử lý (mới hoặc cũ)
+        private bool isEditMode = false;  // đang sửa hay tạo mới
+        public FormContract(Staff staff) : this(staff, null) { }
+        // Constructor mới: cho sửa hợp đồng
+        public FormContract(Staff staff, Contract contractToEdit)
         {
             InitializeComponent();
+
             bus_contract = new BUS_Contract();
             bus_staff = new BUS_Staff();
             LoadContentCombobox();
+
             this.staff = staff;
 
-            // Tạo hợp đồng mới
-            newContract = new Contract();
-            newContract.StaffID = staff.ID;
-            newContract.ID = GetFormatString.MakingIDNow(); // giữ nguyên như yêu cầu
+            if (contractToEdit == null)
+            {
+                // === TẠO MỚI ===
+                isEditMode = false;
+                currentContract = new Contract();
+                currentContract.StaffID = staff.ID;
+                currentContract.ID = GetFormatString.MakingIDNow();
 
-            // Hiển thị thông tin mặc định
-            txtContractID.Text = newContract.ID;
-            dtPickStart.Value = DateTime.Today;
-            dtPickEnd.Value = DateTime.Today.AddYears(1); // mặc định 1 năm
-            cbTypeWork.SelectedIndex = 0; // fulltime mặc định
-            txtSalary.Text = "0";
+                txtContractID.Text = currentContract.ID;
+                dtPickStart.Value = DateTime.Today;
+                dtPickEnd.Value = DateTime.Today.AddYears(1);
+                cbTypeWork.SelectedIndex = 0;
+                txtSalary.Text = "0";
+                this.Text = "Tạo hợp đồng mới";
+            }
+            else
+            {
+                // === SỬA HỢP ĐỒNG ===
+                isEditMode = true;
+                currentContract = contractToEdit;
+
+                txtContractID.Text = currentContract.ID;
+                txtContractID.ReadOnly = true; // không cho sửa mã
+
+                dtPickStart.Value = currentContract.DayStart;
+                dtPickEnd.Value = currentContract.DayEnd;
+
+                // Chọn loại công việc
+                if (currentContract.E_typeWork == "fulltime")
+                    cbTypeWork.SelectedIndex = 0;
+                else if (currentContract.E_typeWork == "parttime")
+                    cbTypeWork.SelectedIndex = 1;
+
+                // Chọn buổi làm việc nếu là parttime
+                if (currentContract.E_typeWork == "parttime" && currentContract.E_spells != null)
+                {
+                    cbSpells.SelectedIndex = cbSpells.FindStringExact(
+                        currentContract.E_spells == "morning" ? "Ca sáng" :
+                        currentContract.E_spells == "afternoon" ? "Ca chiều" : "Ca tối"
+                    );
+                }
+
+                txtSalary.Text = currentContract.SolidSalary.ToString("F0"); // không chữ số lẻ
+
+                this.Text = "Sửa hợp đồng";
+            }
         }
 
         private void LoadContentCombobox()
@@ -54,47 +95,55 @@ namespace buithanhthang_2121110129
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // Validate dữ liệu
+            // Validate chung
             if (dtPickStart.Value > dtPickEnd.Value)
             {
                 MessageBox.Show("Ngày bắt đầu không được lớn hơn ngày kết thúc!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (cbTypeWork.Text.Equals("parttime") && cbSpells.SelectedItem == null)
+            if (cbTypeWork.Text == "parttime" && cbSpells.SelectedItem == null)
             {
                 MessageBox.Show("Vui lòng chọn buổi làm việc cho nhân viên part-time!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            float salary = 0;
-            if (!float.TryParse(txtSalary.Text.Trim(), out salary) || salary < 0)
+            if (!float.TryParse(txtSalary.Text.Trim(), out float salary) || salary < 0)
             {
-                MessageBox.Show("Mức lương không hợp lệ! Vui lòng nhập số dương.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mức lương không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Gán dữ liệu vào contract
-            newContract.DayStart = dtPickStart.Value;
-            newContract.DayEnd = dtPickEnd.Value;
-            newContract.E_typeWork = cbTypeWork.Text;
-            newContract.E_spells = cbTypeWork.Text.Equals("parttime") ? cbSpells.Text : null;
-            newContract.SolidSalary = salary;
+            // Cập nhật dữ liệu vào currentContract
+            currentContract.DayStart = dtPickStart.Value;
+            currentContract.DayEnd = dtPickEnd.Value;
+            currentContract.E_typeWork = cbTypeWork.Text;
+            currentContract.E_spells = cbTypeWork.Text == "parttime" ? cbSpells.Text : null;
+            currentContract.SolidSalary = salary;
 
-            // Lưu vào database
-            if (bus_contract.Create(newContract))
+            bool success;
+            string message;
+
+            if (isEditMode)
             {
-                MessageBox.Show($"Tạo hợp đồng thành công!\nMã hợp đồng: {newContract.ID}\nNhân viên: {staff.Name}",
-                    "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                success = bus_contract.Update(currentContract);
+                message = success ? "Cập nhật hợp đồng thành công!" : "Cập nhật hợp đồng thất bại!";
             }
             else
             {
-                MessageBox.Show("Tạo hợp đồng thất bại! Vui lòng thử lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                success = bus_contract.Create(currentContract);
+                message = success ? "Tạo hợp đồng thành công!" : "Tạo hợp đồng thất bại!";
+            }
+
+            MessageBox.Show(message, success ? "Thành công" : "Lỗi",
+                MessageBoxButtons.OK, success ? MessageBoxIcon.Information : MessageBoxIcon.Error);
+
+            if (success)
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
         }
-
         #region MoveForm (giữ nguyên như cũ)
         private Point firstPoint;
         private bool mouseIsDown = false;

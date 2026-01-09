@@ -1,6 +1,7 @@
 ﻿using buithanhthang_2121110129.DataAccessLayer;
 using buithanhthang_2121110129.DTO;
 using buithanhthang_2121110129.Services;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -29,7 +30,30 @@ namespace buithanhthang_2121110129.BusinessLogicLayer
 
         public bool Delete(Contract contract)
         {
-            return dao.Delete(contract);
+            try
+            {
+                if (string.IsNullOrEmpty(contract.ID))
+                    return false;
+
+                string query = "DELETE FROM contracts WHERE ID = @ID";
+                int rows = DataProvider.Instance.ExecuteNonQuery(query, CommandType.Text,
+                    new SqlParameter("@ID", contract.ID.Trim()));
+
+                if (rows > 0)
+                    return true;
+                else
+                {
+                    MessageBox.Show("Không tìm thấy hợp đồng để xóa (có thể đã bị xóa trước đó)!",
+                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xóa hợp đồng:\n" + ex.Message,
+                    "LỖI DATABASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
 
         public DataTable GetAllContractOfStaff(string staff_id)

@@ -113,7 +113,7 @@
             pnlMain.Controls.Add(gbStoreInfor);
             pnlMain.Location = new Point(0, 0);
             pnlMain.Name = "pnlMain";
-            pnlMain.Size = new Size(1350, 768);
+            pnlMain.Size = new Size(1366, 733);
             pnlMain.TabIndex = 0;
             // 
             // gbYourInfor
@@ -128,7 +128,7 @@
             gbYourInfor.ForeColor = Color.White;
             gbYourInfor.Location = new Point(679, 456);
             gbYourInfor.Name = "gbYourInfor";
-            gbYourInfor.Size = new Size(667, 267);
+            gbYourInfor.Size = new Size(684, 274);
             gbYourInfor.TabIndex = 2;
             gbYourInfor.TabStop = false;
             gbYourInfor.Text = "Thông tin cá nhân";
@@ -202,7 +202,7 @@
             pnlCustomer.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             pnlCustomer.Location = new Point(679, 3);
             pnlCustomer.Name = "pnlCustomer";
-            pnlCustomer.Size = new Size(668, 452);
+            pnlCustomer.Size = new Size(684, 452);
             pnlCustomer.TabIndex = 2;
             pnlCustomer.TabStop = false;
             pnlCustomer.Text = "Thông tin khách hàng";
@@ -242,7 +242,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvCustomer.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvCustomer.Size = new Size(656, 273);
+            dgvCustomer.Size = new Size(672, 273);
             dgvCustomer.TabIndex = 33;
             dgvCustomer.CellContentClick += dgvCustomer_CellContentClick;
             // 
@@ -377,7 +377,7 @@
             gbStoreContact.ForeColor = Color.White;
             gbStoreContact.Location = new Point(3, 456);
             gbStoreContact.Name = "gbStoreContact";
-            gbStoreContact.Size = new Size(670, 267);
+            gbStoreContact.Size = new Size(670, 274);
             gbStoreContact.TabIndex = 1;
             gbStoreContact.TabStop = false;
             gbStoreContact.Text = "Cửa hàng";
@@ -684,7 +684,7 @@
             Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Margin = new Padding(7, 6, 7, 6);
             Name = "UCHomePage";
-            Size = new Size(1350, 768);
+            Size = new Size(1366, 733);
             pnlMain.ResumeLayout(false);
             gbYourInfor.ResumeLayout(false);
             gbYourInfor.PerformLayout();

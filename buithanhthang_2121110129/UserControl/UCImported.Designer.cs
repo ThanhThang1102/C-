@@ -81,7 +81,7 @@
             pnlMain.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             pnlMain.Location = new Point(0, 0);
             pnlMain.Name = "pnlMain";
-            pnlMain.Size = new Size(1350, 768);
+            pnlMain.Size = new Size(1366, 733);
             pnlMain.TabIndex = 3;
             // 
             // gbMakeBill
@@ -101,14 +101,14 @@
             gbMakeBill.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             gbMakeBill.Location = new Point(706, 3);
             gbMakeBill.Name = "gbMakeBill";
-            gbMakeBill.Size = new Size(641, 726);
+            gbMakeBill.Size = new Size(657, 727);
             gbMakeBill.TabIndex = 6;
             gbMakeBill.TabStop = false;
             gbMakeBill.Text = "Tạo thông tin nhập hàng";
             // 
             // btnMakeBills
             // 
-            btnMakeBills.Location = new Point(452, 681);
+            btnMakeBills.Location = new Point(462, 681);
             btnMakeBills.Name = "btnMakeBills";
             btnMakeBills.Size = new Size(183, 36);
             btnMakeBills.TabIndex = 38;
@@ -118,7 +118,7 @@
             // 
             // btnCancelBill
             // 
-            btnCancelBill.Location = new Point(6, 681);
+            btnCancelBill.Location = new Point(12, 681);
             btnCancelBill.Name = "btnCancelBill";
             btnCancelBill.Size = new Size(183, 36);
             btnCancelBill.TabIndex = 32;
@@ -131,7 +131,7 @@
             gbListProduct.Controls.Add(flowpnl_Item);
             gbListProduct.Location = new Point(6, 150);
             gbListProduct.Name = "gbListProduct";
-            gbListProduct.Size = new Size(629, 525);
+            gbListProduct.Size = new Size(645, 525);
             gbListProduct.TabIndex = 37;
             gbListProduct.TabStop = false;
             gbListProduct.Text = "Danh sách sản phẩm nhập kho";
@@ -143,7 +143,7 @@
             flowpnl_Item.ForeColor = SystemColors.ControlText;
             flowpnl_Item.Location = new Point(6, 21);
             flowpnl_Item.Name = "flowpnl_Item";
-            flowpnl_Item.Size = new Size(617, 498);
+            flowpnl_Item.Size = new Size(633, 504);
             flowpnl_Item.TabIndex = 1;
             toolTip.SetToolTip(flowpnl_Item, "Nhấn đúp chuột vào sản phẩm để thêm vào giỏ hàng");
             // 
@@ -243,7 +243,7 @@
             gbFilter.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             gbFilter.Location = new Point(3, 3);
             gbFilter.Name = "gbFilter";
-            gbFilter.Size = new Size(697, 726);
+            gbFilter.Size = new Size(697, 727);
             gbFilter.TabIndex = 5;
             gbFilter.TabStop = false;
             gbFilter.Text = "Lọc thông tin";
@@ -445,7 +445,7 @@
             Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(6);
             Name = "UCImported";
-            Size = new Size(1350, 768);
+            Size = new Size(1366, 733);
             pnlMain.ResumeLayout(false);
             gbMakeBill.ResumeLayout(false);
             gbMakeBill.PerformLayout();

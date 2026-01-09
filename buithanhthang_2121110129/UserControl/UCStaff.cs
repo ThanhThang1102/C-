@@ -74,6 +74,9 @@ namespace buithanhthang_2121110129.UserControl
             txtPassword.Clear();
             dgvContracts.Controls.Clear();
             dgvContracts.DataSource = null;
+
+            btnEditContract.Visible = false;
+            btnDeleteContract.Visible = false;
         }
 
 
@@ -270,10 +273,55 @@ namespace buithanhthang_2121110129.UserControl
             btnShowPassword.Text = (btnShowPassword.Text == "Hiện mật khẩu") ? "Ẩn mật khẩu" : "Hiện mật khẩu";
             txtPassword.PasswordChar = (txtPassword.PasswordChar == '*') ? '\0' : '*';
         }
-
+        private bool isChangingPassword = false;
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
+            if (!isChangingPassword)
+            {
+                isChangingPassword = true;
+                txtPassword.ReadOnly = false;
+                txtPassword.PasswordChar = '*';
+                txtPassword.Clear();
+                txtPassword.Focus();
 
+                btnChangePassword.Text = "Lưu";
+                btnShowPassword.Visible = true;
+                MessageBox.Show("Nhập mật khẩu mới và bấm 'Lưu' để xác nhận.",
+                    "Đổi mật khẩu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                string newPassword = txtPassword.Text.Trim();
+
+                if (string.IsNullOrEmpty(newPassword))
+                {
+                    MessageBox.Show("Mật khẩu không được để trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (newPassword.Length < 6)
+                {
+                    MessageBox.Show("Mật khẩu phải có ít nhất 6 ký tự!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                Account currentAccount = bus_account.GetAccountByStaffID(_staff.ID);
+                currentAccount.Password = newPassword;
+
+                if (bus_account.Update(currentAccount))
+                {
+                    MessageBox.Show("Đổi mật khẩu thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    isChangingPassword = false;
+                    txtPassword.ReadOnly = true;
+                    txtPassword.Text = newPassword;
+                    btnChangePassword.Text = "Đổi mật khẩu";
+                }
+                else
+                {
+                    MessageBox.Show("Đổi mật khẩu thất bại! Vui lòng thử lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnEditStaffInfor_Click(object sender, EventArgs e)
@@ -331,8 +379,6 @@ namespace buithanhthang_2121110129.UserControl
             var id = dgvStaff.CurrentRow.Cells[0].Value?.ToString();
             if (string.IsNullOrEmpty(id)) return;
             _staff = bus_staff.GetStaff(dgvStaff.CurrentRow.Cells[0].Value.ToString()); // Id cell
-            //_staff = bus_staff.GetStaff(id);
-            //if (_staff == null) return;
 
             txtName.Text = _staff.Name;
             txtGender.Text = _staff.Gender;
@@ -352,6 +398,100 @@ namespace buithanhthang_2121110129.UserControl
             txtPassword.Text = acc.Password;
 
             dgvContracts.DataSource = bus_contract.GetAllContractOfStaff(_staff.ID);
+
+            btnEditContract.Visible = true;
+            btnDeleteContract.Visible = true;
+
+            isChangingPassword = false;
+            txtPassword.ReadOnly = true;
+            btnChangePassword.Text = "Đổi mật khẩu";
+        }
+
+        private void btnDeleteContract_Click(object sender, EventArgs e)
+        {
+            if (dgvContracts.CurrentRow == null || dgvContracts.CurrentRow.Index < 0)
+            {
+                MessageBox.Show("Vui lòng chọn một hợp đồng từ danh sách để xóa!",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string contractID = dgvContracts.CurrentRow.Cells[0].Value?.ToString();
+
+            if (string.IsNullOrEmpty(contractID))
+            {
+                MessageBox.Show("Không lấy được mã hợp đồng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show(
+                $"Bạn có chắc chắn muốn xóa hợp đồng:\nMã: {contractID}\nNhân viên: {_staff.Name}?\n\nHành động này không thể hoàn tác!",
+                "Xác nhận xóa hợp đồng",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (result != DialogResult.Yes)
+                return;
+
+            Contract contractToDelete = new Contract();
+            contractToDelete.ID = contractID;
+
+            if (bus_contract.Delete(contractToDelete))
+            {
+                MessageBox.Show("Xóa hợp đồng thành công!",
+                    "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                dgvContracts.DataSource = bus_contract.GetAllContractOfStaff(_staff.ID);
+            }
+            else
+            {
+                MessageBox.Show("Không thể xóa hợp đồng. Có thể đã bị xóa trước đó hoặc xảy ra lỗi.",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnEditContract_Click(object sender, EventArgs e)
+        {
+            if (dgvContracts.CurrentRow == null || dgvContracts.CurrentRow.Index < 0)
+            {
+                MessageBox.Show("Vui lòng chọn một hợp đồng từ danh sách để sửa!",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string contractID = dgvContracts.CurrentRow.Cells[0].Value.ToString();
+
+            Contract contractToEdit = null;
+            DataTable dt = bus_contract.GetAllContractOfStaff(_staff.ID);
+            foreach (DataRow row in dt.Rows)
+            {
+                if (row["ID"].ToString() == contractID)
+                {
+                    contractToEdit = new Contract(
+                        iD: row["ID"].ToString(),
+                        staffID: row["StaffID"].ToString(),
+                        dayStart: (DateTime)row["DayStart"],
+                        dayEnd: (DateTime)row["DayEnd"],
+                        e_typeWork: row["TypeWork"].ToString(),
+                        e_spells: row["Spells"] == DBNull.Value ? null : row["Spells"].ToString(),
+                        solidSalary: Convert.ToSingle(row["SolidSalary"])
+                    );
+                    break;
+                }
+            }
+
+            if (contractToEdit == null)
+            {
+                MessageBox.Show("Không tìm thấy thông tin hợp đồng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            FormContract formEdit = new FormContract(_staff, contractToEdit);
+            if (formEdit.ShowDialog() == DialogResult.OK)
+            {
+                dgvContracts.DataSource = bus_contract.GetAllContractOfStaff(_staff.ID);
+                MessageBox.Show("Cập nhật hợp đồng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 

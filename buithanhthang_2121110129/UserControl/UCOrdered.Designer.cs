@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlMain = new Panel();
             gbMakeBill = new GroupBox();
             btnMakeBills = new Button();
@@ -83,7 +83,7 @@
             pnlMain.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             pnlMain.Location = new Point(0, 0);
             pnlMain.Name = "pnlMain";
-            pnlMain.Size = new Size(1350, 768);
+            pnlMain.Size = new Size(1366, 733);
             pnlMain.TabIndex = 2;
             // 
             // gbMakeBill
@@ -105,14 +105,14 @@
             gbMakeBill.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             gbMakeBill.Location = new Point(706, 3);
             gbMakeBill.Name = "gbMakeBill";
-            gbMakeBill.Size = new Size(641, 710);
+            gbMakeBill.Size = new Size(657, 727);
             gbMakeBill.TabIndex = 4;
             gbMakeBill.TabStop = false;
             gbMakeBill.Text = "Tạo hóa đơn bán hàng";
             // 
             // btnMakeBills
             // 
-            btnMakeBills.Location = new Point(452, 627);
+            btnMakeBills.Location = new Point(462, 684);
             btnMakeBills.Name = "btnMakeBills";
             btnMakeBills.Size = new Size(183, 36);
             btnMakeBills.TabIndex = 38;
@@ -122,7 +122,7 @@
             // 
             // btnCancelBill
             // 
-            btnCancelBill.Location = new Point(6, 627);
+            btnCancelBill.Location = new Point(12, 684);
             btnCancelBill.Name = "btnCancelBill";
             btnCancelBill.Size = new Size(183, 36);
             btnCancelBill.TabIndex = 32;
@@ -135,7 +135,7 @@
             gbListProduct.Controls.Add(flowpnl_Item);
             gbListProduct.Location = new Point(6, 170);
             gbListProduct.Name = "gbListProduct";
-            gbListProduct.Size = new Size(629, 452);
+            gbListProduct.Size = new Size(645, 508);
             gbListProduct.TabIndex = 37;
             gbListProduct.TabStop = false;
             gbListProduct.Text = "Danh sách sản phẩm và in hóa đơn";
@@ -147,7 +147,7 @@
             flowpnl_Item.ForeColor = SystemColors.ControlText;
             flowpnl_Item.Location = new Point(6, 21);
             flowpnl_Item.Name = "flowpnl_Item";
-            flowpnl_Item.Size = new Size(617, 425);
+            flowpnl_Item.Size = new Size(633, 481);
             flowpnl_Item.TabIndex = 0;
             toolTip.SetToolTip(flowpnl_Item, "Nhấn đúp chuột vào sản phẩm để thêm vào giỏ hàng");
             // 
@@ -263,27 +263,27 @@
             gbFilter.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             gbFilter.Location = new Point(3, 3);
             gbFilter.Name = "gbFilter";
-            gbFilter.Size = new Size(697, 710);
+            gbFilter.Size = new Size(697, 727);
             gbFilter.TabIndex = 3;
             gbFilter.TabStop = false;
             gbFilter.Text = "Lọc thông tin";
             // 
             // dgvProduct
             // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 128, 128);
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(255, 128, 128);
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvProduct.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProduct.EnableHeadersVisualStyles = false;
             dgvProduct.Location = new Point(15, 186);
             dgvProduct.Name = "dgvProduct";
             dgvProduct.ReadOnly = true;
-            dgvProduct.Size = new Size(661, 436);
+            dgvProduct.Size = new Size(661, 450);
             dgvProduct.TabIndex = 34;
             dgvProduct.CellDoubleClick += dgvProduct_CellDoubleClick;
             // 
@@ -299,7 +299,7 @@
             // 
             // btnUseScanMachine
             // 
-            btnUseScanMachine.Location = new Point(15, 627);
+            btnUseScanMachine.Location = new Point(15, 642);
             btnUseScanMachine.Name = "btnUseScanMachine";
             btnUseScanMachine.Size = new Size(275, 36);
             btnUseScanMachine.TabIndex = 32;
@@ -309,7 +309,7 @@
             // 
             // btnCheckCustomer
             // 
-            btnCheckCustomer.Location = new Point(15, 669);
+            btnCheckCustomer.Location = new Point(15, 684);
             btnCheckCustomer.Name = "btnCheckCustomer";
             btnCheckCustomer.Size = new Size(275, 36);
             btnCheckCustomer.TabIndex = 30;
@@ -319,7 +319,7 @@
             // 
             // btnChooseProduct
             // 
-            btnChooseProduct.Location = new Point(401, 627);
+            btnChooseProduct.Location = new Point(401, 642);
             btnChooseProduct.Name = "btnChooseProduct";
             btnChooseProduct.Size = new Size(275, 36);
             btnChooseProduct.TabIndex = 29;
@@ -329,7 +329,7 @@
             // 
             // btnCheckHistory
             // 
-            btnCheckHistory.Location = new Point(401, 669);
+            btnCheckHistory.Location = new Point(401, 684);
             btnCheckHistory.Name = "btnCheckHistory";
             btnCheckHistory.Size = new Size(275, 36);
             btnCheckHistory.TabIndex = 28;
@@ -464,7 +464,7 @@
             Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(6);
             Name = "UCOrdered";
-            Size = new Size(1350, 768);
+            Size = new Size(1366, 733);
             pnlMain.ResumeLayout(false);
             gbMakeBill.ResumeLayout(false);
             gbMakeBill.PerformLayout();

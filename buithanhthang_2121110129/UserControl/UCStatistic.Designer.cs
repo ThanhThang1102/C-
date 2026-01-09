@@ -104,7 +104,7 @@
             pnlMain.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             pnlMain.Location = new Point(0, 0);
             pnlMain.Name = "pnlMain";
-            pnlMain.Size = new Size(1350, 768);
+            pnlMain.Size = new Size(1366, 733);
             pnlMain.TabIndex = 2;
             // 
             // gbMakeReport
@@ -115,7 +115,7 @@
             gbMakeReport.Controls.Add(btnOutputReport);
             gbMakeReport.Location = new Point(809, 444);
             gbMakeReport.Name = "gbMakeReport";
-            gbMakeReport.Size = new Size(538, 264);
+            gbMakeReport.Size = new Size(554, 286);
             gbMakeReport.TabIndex = 2;
             gbMakeReport.TabStop = false;
             gbMakeReport.Text = "Tạo báo cáo";
@@ -134,7 +134,7 @@
             gbChooseReportInfor.ForeColor = Color.Black;
             gbChooseReportInfor.Location = new Point(229, 23);
             gbChooseReportInfor.Name = "gbChooseReportInfor";
-            gbChooseReportInfor.Size = new Size(297, 194);
+            gbChooseReportInfor.Size = new Size(319, 215);
             gbChooseReportInfor.TabIndex = 7;
             gbChooseReportInfor.TabStop = false;
             gbChooseReportInfor.Text = "Chọn thông tin";
@@ -233,7 +233,7 @@
             gbTimeReport.ForeColor = Color.Black;
             gbTimeReport.Location = new Point(12, 23);
             gbTimeReport.Name = "gbTimeReport";
-            gbTimeReport.Size = new Size(211, 232);
+            gbTimeReport.Size = new Size(211, 257);
             gbTimeReport.TabIndex = 8;
             gbTimeReport.TabStop = false;
             gbTimeReport.Text = "Chọn Thời gian";
@@ -303,9 +303,9 @@
             // 
             // btnOutputReport
             // 
-            btnOutputReport.Location = new Point(229, 219);
+            btnOutputReport.Location = new Point(229, 244);
             btnOutputReport.Name = "btnOutputReport";
-            btnOutputReport.Size = new Size(303, 36);
+            btnOutputReport.Size = new Size(319, 36);
             btnOutputReport.TabIndex = 4;
             btnOutputReport.Text = "Xuất báo cáo";
             btnOutputReport.UseVisualStyleBackColor = true;
@@ -318,7 +318,7 @@
             groupBox2.Controls.Add(cbInformationPlus);
             groupBox2.Location = new Point(809, 3);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(538, 435);
+            groupBox2.Size = new Size(554, 435);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Sản phẩm trong cửa hàng";
@@ -332,7 +332,7 @@
             gbCheckTypeProductChart.ForeColor = Color.Black;
             gbCheckTypeProductChart.Location = new Point(6, 26);
             gbCheckTypeProductChart.Name = "gbCheckTypeProductChart";
-            gbCheckTypeProductChart.Size = new Size(526, 129);
+            gbCheckTypeProductChart.Size = new Size(542, 129);
             gbCheckTypeProductChart.TabIndex = 9;
             gbCheckTypeProductChart.TabStop = false;
             gbCheckTypeProductChart.Text = "Chọn dạng biểu đồ";
@@ -375,7 +375,7 @@
             gbCheckTimeProduct.ForeColor = Color.Black;
             gbCheckTimeProduct.Location = new Point(6, 161);
             gbCheckTimeProduct.Name = "gbCheckTimeProduct";
-            gbCheckTimeProduct.Size = new Size(526, 62);
+            gbCheckTimeProduct.Size = new Size(542, 62);
             gbCheckTimeProduct.TabIndex = 8;
             gbCheckTimeProduct.TabStop = false;
             gbCheckTimeProduct.Text = "Chọn Thời gian";
@@ -436,7 +436,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             cbInformationPlus.Series.Add(series1);
-            cbInformationPlus.Size = new Size(526, 199);
+            cbInformationPlus.Size = new Size(542, 199);
             cbInformationPlus.TabIndex = 1;
             cbInformationPlus.Text = " ";
             // 
@@ -449,7 +449,7 @@
             gbSales.Controls.Add(gbSellingHistory);
             gbSales.Location = new Point(3, 3);
             gbSales.Name = "gbSales";
-            gbSales.Size = new Size(800, 705);
+            gbSales.Size = new Size(800, 727);
             gbSales.TabIndex = 0;
             gbSales.TabStop = false;
             gbSales.Text = "Thống kê doanh thu";
@@ -533,7 +533,7 @@
             series3.Name = "Chi tiêu";
             chartSales.Series.Add(series2);
             chartSales.Series.Add(series3);
-            chartSales.Size = new Size(788, 361);
+            chartSales.Size = new Size(788, 383);
             chartSales.TabIndex = 5;
             chartSales.Text = "Biểu đồ thu nhập";
             // 
@@ -614,7 +614,7 @@
             Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(6);
             Name = "UCStatistic";
-            Size = new Size(1350, 768);
+            Size = new Size(1366, 733);
             pnlMain.ResumeLayout(false);
             gbMakeReport.ResumeLayout(false);
             gbChooseReportInfor.ResumeLayout(false);
